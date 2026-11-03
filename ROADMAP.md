@@ -7,8 +7,8 @@ Maintained by the coordinator. Requirement IDs refer to
 
 | Agent | Repository | Library | Current work |
 | --- | --- | --- | --- |
-| core | `inkproof-core` | `Inkproof.Core` | Milestone 1 (request pending) |
-| scale | `inkproof-scale` | `Inkproof.Scale` | Milestone 1 (request pending) |
+| core | `inkproof-core` | `Inkproof.Core` | Milestone 1: [inkproof-core#1](https://github.com/tentenths/inkproof-core/issues/1) |
+| scale | `inkproof-scale` | `Inkproof.Scale` | Milestone 1: [inkproof-scale#1](https://github.com/tentenths/inkproof-scale/issues/1) |
 | consumer-metrics | `inkproof-consumer-metrics` | consumer, not a library | Milestone 1, starts after the first Core release |
 
 No other agents exist yet. Axis, Scene, Gpu, Viewport, Web and Export have
@@ -66,8 +66,8 @@ consumer is released before the requester upgrades.
 
 | Request | Owner | Blocks |
 | --- | --- | --- |
-| Core Milestone 1 brief (to be opened) | core | scale (Core-dependent parts), consumer-metrics |
-| Scale Milestone 1 brief (to be opened) | scale | consumer-metrics (scale half) |
+| [inkproof-core#1](https://github.com/tentenths/inkproof-core/issues/1): Core Milestone 1 brief | core | scale (Core-dependent parts), consumer-metrics |
+| [inkproof-scale#1](https://github.com/tentenths/inkproof-scale/issues/1): Scale Milestone 1 brief | scale | consumer-metrics (scale half) |
 
 ### Acceptance criteria
 
