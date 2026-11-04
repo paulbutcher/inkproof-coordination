@@ -27,7 +27,7 @@ Six principles govern every requirement below; where a requirement conflicts wit
 
 The set consists of eight libraries in strict layers; everything that decides what appears on screen and how it is drawn is Lean, and the boundary to untrusted code is a GPU command list executed by generated JavaScript.
 
-&#91;embedded content: library layering and trust boundary\]
+![Architecture Diagram](architecture.svg)
 
 Arrows show data flow: the consumer drives Inkproof.Web, which hands GPU command lists to the generated interpreter; everything in the shaded column is trusted rather than proved.
 
