@@ -18,9 +18,9 @@ Establish the first two layers and prove a consumer can use them from released v
 
 | Library | In scope | Brief |
 | --- | --- | --- |
-| Inkproof.Core | Setup; CORE-1, CORE-2, CORE-3, CORE-5, CORE-6, FP-1, FP-2, PROOF-1, PROOF-2, PROOF-3 | inkproof-core issue (link to follow) |
-| Inkproof.Scale | Linear scales only (part of SCALE-1), SCALE-2, PROOF-5 | inkproof-scale issue (link to follow) |
-| inkproof-consumer-metrics | Headless server-metrics consumer of both (VAL-3, VAL-2), native only | inkproof-consumer-metrics issue (link to follow) |
+| Inkproof.Core | Setup; CORE-1, CORE-2, CORE-3, CORE-5, CORE-6, FP-1, FP-2, PROOF-1, PROOF-2, PROOF-3 | [inkproof-core#2](https://github.com/tentenths/inkproof-core/issues/2) |
+| Inkproof.Scale | Linear scales only (part of SCALE-1), SCALE-2, PROOF-5 | [inkproof-scale#2](https://github.com/tentenths/inkproof-scale/issues/2) |
+| inkproof-consumer-metrics | Headless server-metrics consumer of both (VAL-3, VAL-2), native only | [inkproof-consumer-metrics#1](https://github.com/tentenths/inkproof-consumer-metrics/issues/1) |
 
 Everything else is out of scope, including CORE-4, CORE-7, CORE-8, FP-3, FP-4, the other scale kinds, SCALE-3 to SCALE-6, Node builds (PLAT-8) and calendar time.
 
