@@ -10,7 +10,7 @@ Requirement IDs refer to [REQUIREMENTS.md](REQUIREMENTS.md). Decisions waiting f
 | inkproof-scale | Milestone 1 brief, not started | Release `inkproof-core` v0.1.0 |
 | inkproof-consumer-metrics | Milestone 1 brief, not started | Release `inkproof-scale` v0.1.0 |
 
-Other open requests: [inkproof-coordination#3](https://github.com/tentenths/inkproof-coordination/issues/3) (record the decisions below), done in #2 and #4, waiting for Core to verify and close.
+Other open requests: [inkproof-core#6](https://github.com/tentenths/inkproof-core/issues/6) (delete the stray `.env`, decided by the human); [inkproof-coordination#3](https://github.com/tentenths/inkproof-coordination/issues/3) (record the decisions below), done in #2 and #4, waiting for Core to verify and close.
 
 ## Decisions
 
