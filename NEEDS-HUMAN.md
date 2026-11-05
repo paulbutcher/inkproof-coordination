@@ -1,16 +1,15 @@
 # Needs the human
 
-## Decisions
+## Decisions and actions
 
-- **Mathlib.** Whether any library may depend on Mathlib (REQUIREMENTS.md open question; PLAT-3). Waiting on Core's report of whether a small program importing Mathlib builds and runs under Lasm at Lean v4.35.0, and at what cost ([inkproof-core#2](https://github.com/tentenths/inkproof-core/issues/2)). Needed before Core writes proofs that would rely on it, and before Scale starts.
-- **Lasm in CI.** Each repository's `checks.yml` runs `lake build` and `lake test` but installs nothing for Lasm, and agents cannot edit workflows. Once Core reports what its Lasm test runs need, decide whether to add a step to the workflow in each library repository.
-- **Sharing the `API.lock` generator.** Core's brief asks it to build one; Scale and every later library need the same, and may not copy it. Decide whether they use Core's from a release, or whether it moves to a repository of its own.
-- **Licence.** The file header in CLAUDE.md says Apache 2.0 and refers to a `LICENSE` file, but no repository has one and REQUIREMENTS.md still lists the licence as open. Confirm, so agents add `LICENSE` during setup.
-- **`.env` in inkproof-core.** Committed in the initial checkin; it holds deployment settings (owner, account names, host IDs), no tokens. Decide whether it should be removed.
+- **Lasm in Scale's CI.** Core's `checks.yml` now installs Node and Lasm and sets `INKPROOF_REQUIRE_LASM` (inkproof-core `25882a4`); Scale's does not, and agents cannot edit workflows. Scale's brief requires its tests to pass under Lasm in CI, so it needs the same step before it starts. The consumer is native only and does not.
+- **Licence.** The file header in CLAUDE.md says Apache 2.0 and refers to a `LICENSE` file, but no repository has one and REQUIREMENTS.md still lists the licence as open. Confirm, so agents add `LICENSE`.
+- **`.env` in inkproof-core.** Still on `main` from the initial checkin; it holds deployment settings (owner, account names, host IDs), no tokens. Decide whether it should be removed.
 
 ## Pull requests waiting for you
 
 - [inkproof-coordination#2](https://github.com/tentenths/inkproof-coordination/pull/2): Milestone 1 roadmap and this file.
+- [inkproof-coordination#4](https://github.com/tentenths/inkproof-coordination/pull/4): answers the Mathlib open question in `REQUIREMENTS.md`.
 
 ## Issues labelled `needs-approval`
 
@@ -22,7 +21,6 @@ None.
 
 ## Coming in Milestone 1
 
-- Core's setup pull request adds `lean-toolchain`, which CODEOWNERS sends to you.
-- The first `API.lock` of Core and of Scale.
+- The first non-empty `API.lock` of Core, and Scale's first.
 - Core's axiom file, including the FP-2 float-order axiom (PROC-1).
 - Releases `inkproof-core` v0.1.0, then `inkproof-scale` v0.1.0.

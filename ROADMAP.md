@@ -6,11 +6,16 @@ Requirement IDs refer to [REQUIREMENTS.md](REQUIREMENTS.md). Decisions waiting f
 
 | Agent | Working on | Blocked on |
 | --- | --- | --- |
-| inkproof-core | Milestone 1 brief: setup and the Mathlib-under-Lasm check, then series, aggregates and pyramids | Nothing |
-| inkproof-scale | Milestone 1 brief, not started | Release `inkproof-core` v0.1.0 |
+| inkproof-core | Milestone 1 brief: setup merged (inkproof-core#3); now series, aggregates and pyramids | Nothing |
+| inkproof-scale | Milestone 1 brief, not started | Release `inkproof-core` v0.1.0; Lasm step in its CI workflow |
 | inkproof-consumer-metrics | Milestone 1 brief, not started | Release `inkproof-scale` v0.1.0 |
 
-No other requests are open.
+Other open requests: [inkproof-coordination#3](https://github.com/tentenths/inkproof-coordination/issues/3) (record the decisions below), accepted, in [#4](https://github.com/tentenths/inkproof-coordination/pull/4) and this file.
+
+## Decisions
+
+- No library uses Mathlib for now; revisit if a proof needs it (2026-11-05, on [inkproof-core#2](https://github.com/tentenths/inkproof-core/issues/2)).
+- Libraries generate `API.lock` with Core's `api-lock` executable, run from their own `scripts/api-lock.sh` once they depend on a Core release; none writes its own (2026-11-05, same issue; usage in Core's `DESIGN.md`).
 
 ## Milestone 1: proved aggregation and linear scales
 
@@ -26,7 +31,7 @@ Everything else is out of scope, including CORE-4, CORE-7, CORE-8, FP-3, FP-4, t
 
 ### Order of work
 
-1. Core sets up its package and test subproject and reports whether Mathlib builds and runs under Lasm; the human then decides whether to use Mathlib.
+1. Done: Core set up its package and test subproject, reported on Mathlib under Lasm, and the human decided against Mathlib for now.
 2. Core delivers its brief; the human releases `inkproof-core` v0.1.0.
 3. Scale starts on Core v0.1.0 and delivers its brief; the human releases `inkproof-scale` v0.1.0.
 4. The consumer starts on both releases. Requests it files go to Core or Scale, which change and release before the consumer upgrades; the consumer never works around them.
@@ -37,7 +42,7 @@ Everything else is out of scope, including CORE-4, CORE-7, CORE-8, FP-3, FP-4, t
 - [ ] `inkproof-core` v0.1.0 and `inkproof-scale` v0.1.0 are released on Lean v4.35.0, each meeting its brief's acceptance criteria.
 - [ ] Both libraries build without warnings and pass their tests natively and compiled with Lasm, from the same source, with no Lasm or npm dependency outside their test subprojects (PLAT-1, ARCH-3 in part).
 - [ ] PROOF-1, PROOF-2, PROOF-3 and PROOF-5 are proved without `sorry`, stated in full generality, and recorded in `API.lock` with plain-English statements (PROC-3); the only axiom beyond Lean's own is FP-2's (PROC-1).
-- [ ] The Mathlib question is answered and recorded in `REQUIREMENTS.md`.
+- [ ] The Mathlib question is answered and recorded in `REQUIREMENTS.md` ([#4](https://github.com/tentenths/inkproof-coordination/pull/4)).
 - [ ] `inkproof-consumer-metrics` builds and passes its tests in CI against those releases only, and applies the published theorems to its own types (VAL-2).
 - [ ] Every request filed during the milestone is verified and closed, or deferred to a named milestone.
 
