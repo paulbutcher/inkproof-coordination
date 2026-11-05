@@ -6,11 +6,11 @@ Requirement IDs refer to [REQUIREMENTS.md](REQUIREMENTS.md). Decisions waiting f
 
 | Agent | Working on | Blocked on |
 | --- | --- | --- |
-| inkproof-core | Milestone 1 brief: setup merged (inkproof-core#3); now series, aggregates and pyramids | Nothing |
+| inkproof-core | Milestone 1 brief: setup merged (inkproof-core#3); series and segments (inkproof-core#4) and aggregates (inkproof-core#5, stacked on #4) in review; pyramids, the float type and PROOF-1 to PROOF-3 next | Nothing |
 | inkproof-scale | Milestone 1 brief, not started | Release `inkproof-core` v0.1.0; Lasm step in its CI workflow |
 | inkproof-consumer-metrics | Milestone 1 brief, not started | Release `inkproof-scale` v0.1.0 |
 
-Other open requests: [inkproof-coordination#3](https://github.com/tentenths/inkproof-coordination/issues/3) (record the decisions below), accepted, in [#4](https://github.com/tentenths/inkproof-coordination/pull/4) and this file.
+Other open requests: [inkproof-coordination#3](https://github.com/tentenths/inkproof-coordination/issues/3) (record the decisions below), done in #2 and #4, waiting for Core to verify and close.
 
 ## Decisions
 
@@ -42,7 +42,7 @@ Everything else is out of scope, including CORE-4, CORE-7, CORE-8, FP-3, FP-4, t
 - [ ] `inkproof-core` v0.1.0 and `inkproof-scale` v0.1.0 are released on Lean v4.35.0, each meeting its brief's acceptance criteria.
 - [ ] Both libraries build without warnings and pass their tests natively and compiled with Lasm, from the same source, with no Lasm or npm dependency outside their test subprojects (PLAT-1, ARCH-3 in part).
 - [ ] PROOF-1, PROOF-2, PROOF-3 and PROOF-5 are proved without `sorry`, stated in full generality, and recorded in `API.lock` with plain-English statements (PROC-3); the only axiom beyond Lean's own is FP-2's (PROC-1).
-- [ ] The Mathlib question is answered and recorded in `REQUIREMENTS.md` ([#4](https://github.com/tentenths/inkproof-coordination/pull/4)).
+- [x] The Mathlib question is answered and recorded in `REQUIREMENTS.md`.
 - [ ] `inkproof-consumer-metrics` builds and passes its tests in CI against those releases only, and applies the published theorems to its own types (VAL-2).
 - [ ] Every request filed during the milestone is verified and closed, or deferred to a named milestone.
 

@@ -8,8 +8,8 @@
 
 ## Pull requests waiting for you
 
-- [inkproof-coordination#2](https://github.com/tentenths/inkproof-coordination/pull/2): Milestone 1 roadmap and this file.
-- [inkproof-coordination#4](https://github.com/tentenths/inkproof-coordination/pull/4): answers the Mathlib open question in `REQUIREMENTS.md`.
+- [inkproof-core#4](https://github.com/tentenths/inkproof-core/pull/4): series and segments (CORE-1 to CORE-3); Core's first public API, so `API.lock` needs your review. The coordinator's scope comment asks for proofs, or recorded obstacles, for `splitWhere`, `ofPoints?` and `ofUnsorted`.
+- [inkproof-core#5](https://github.com/tentenths/inkproof-core/pull/5): aggregates (CORE-5), stacked on #4; `API.lock` again. The coordinator's scope comment asks for proofs, or recorded obstacles, that each aggregate computes what its name says, which the central min/max guarantee depends on.
 
 ## Issues labelled `needs-approval`
 
