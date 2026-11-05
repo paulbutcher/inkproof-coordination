@@ -6,11 +6,11 @@ Requirement IDs refer to [REQUIREMENTS.md](REQUIREMENTS.md). Decisions waiting f
 
 | Agent | Working on | Blocked on |
 | --- | --- | --- |
-| inkproof-core | Milestone 1 brief: setup, series and segments, and aggregates merged (inkproof-core#3, #4, #5); pyramids with PROOF-1 and PROOF-2 in review (inkproof-core#12); x-range queries, segment-aware pyramids with PROOF-3, and the float type next | Nothing |
+| inkproof-core | Milestone 1 brief: everything in scope is merged or in review. Merged: setup, series, aggregates, pyramids (inkproof-core#3, #4, #5, #12). In review: x-range and segmented queries with PROOF-3 (#13), the float type with the FP-2 axiom and PROC-1 check (#14), README (#15). Next: the trusted computing base table (TCB-1) and `ready-for-release` | Nothing |
 | inkproof-scale | Milestone 1 brief, not started | Release `inkproof-core` v0.1.0 |
 | inkproof-consumer-metrics | Milestone 1 brief, not started | Release `inkproof-scale` v0.1.0 |
 
-Other open requests: [inkproof-scale#3](https://github.com/tentenths/inkproof-scale/issues/3) and [inkproof-consumer-metrics#2](https://github.com/tentenths/inkproof-consumer-metrics/issues/2) (add the Apache 2.0 `LICENSE`, with their setup); [inkproof-core#10](https://github.com/tentenths/inkproof-core/issues/10) (in review as inkproof-core#11), [inkproof-scale#4](https://github.com/tentenths/inkproof-scale/issues/4) and [inkproof-consumer-metrics#3](https://github.com/tentenths/inkproof-consumer-metrics/issues/3) (CLAUDE.md: theorems stating what each public function computes, verbatim; Scale and the consumer with their setup).
+Other open requests: [inkproof-scale#3](https://github.com/tentenths/inkproof-scale/issues/3) and [inkproof-consumer-metrics#2](https://github.com/tentenths/inkproof-consumer-metrics/issues/2) (add the Apache 2.0 `LICENSE`, with their setup); [inkproof-scale#4](https://github.com/tentenths/inkproof-scale/issues/4) and [inkproof-consumer-metrics#3](https://github.com/tentenths/inkproof-consumer-metrics/issues/3) (CLAUDE.md: theorems stating what each public function computes, verbatim; Scale and the consumer with their setup).
 
 ## Decisions
 
