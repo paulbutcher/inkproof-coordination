@@ -2,7 +2,6 @@
 
 ## Decisions and actions
 
-- **Lasm in Scale's CI.** Core's `checks.yml` now installs Node and Lasm and sets `INKPROOF_REQUIRE_LASM` (inkproof-core `25882a4`); Scale's does not, and agents cannot edit workflows. Scale's brief requires its tests to pass under Lasm in CI, so it needs the same step before it starts. The consumer is native only and does not.
 - **Licence.** The file header in CLAUDE.md says Apache 2.0 and refers to a `LICENSE` file, but no repository has one and REQUIREMENTS.md still lists the licence as open. Confirm, so agents add `LICENSE`.
 - **`.env` in inkproof-core.** Still on `main` from the initial checkin; it holds deployment settings (owner, account names, host IDs), no tokens. Decide whether it should be removed.
 
