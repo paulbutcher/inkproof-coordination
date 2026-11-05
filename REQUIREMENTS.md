@@ -146,6 +146,7 @@ The central deliverable is an end-to-end theorem: for every pixel column, the dr
 - **PROC-3** Each public theorem has a plain-English statement in the documentation, linked from the API it covers.
 - **PROC-4** Proofs are written extrinsically where practical, so implementation code stays readable to non-specialists.
 - **PROC-5** Theorems consumers may rely on are public API: they live in the library, in proof modules kept out of what the browser build links, and their statements are tracked in `API.lock`. Other theorems live in the test subproject, where compiling is passing.
+- **PROC-6** Every published operation has a theorem stating what it computes, not only its algebraic laws or invariants; where the proof is out of reach, a property takes its place with the obstacle recorded. The required theorems above are the guarantees the libraries compose, and each relies on these.
 
 ## Platform and integration requirements
 
