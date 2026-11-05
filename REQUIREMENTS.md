@@ -281,4 +281,4 @@ Open questions:
 - [ ] How much of the GLSL ES precision model must be formalised for PROOF-6 and PROOF-15?
 - [ ] Should the PDF exporter be in Lean or delegate to a JavaScript library in the trusted base?
 - [ ] Which seismic network's data and licence to use for the flagship demo?
-- [ ] Licence for the libraries themselves (for example Apache 2.0).
+- [x] Licence for the libraries themselves (for example Apache 2.0)? Apache 2.0, as for Lean and Mathlib, with the standard `LICENSE` file in every repository.

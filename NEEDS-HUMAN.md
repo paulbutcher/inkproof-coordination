@@ -2,14 +2,12 @@
 
 ## Decisions and actions
 
-- **Lasm in Scale's CI.** Core's `checks.yml` now installs Node and Lasm and sets `INKPROOF_REQUIRE_LASM` (inkproof-core `25882a4`); Scale's does not, and agents cannot edit workflows. Scale's brief requires its tests to pass under Lasm in CI, so it needs the same step before it starts. The consumer is native only and does not.
-- **Licence.** The file header in CLAUDE.md says Apache 2.0 and refers to a `LICENSE` file, but no repository has one and REQUIREMENTS.md still lists the licence as open. Confirm, so agents add `LICENSE`.
-- **`.env` in inkproof-core.** Still on `main` from the initial checkin; it holds deployment settings (owner, account names, host IDs), no tokens. Decide whether it should be removed.
+None.
 
 ## Pull requests waiting for you
 
-- [inkproof-coordination#2](https://github.com/tentenths/inkproof-coordination/pull/2): Milestone 1 roadmap and this file.
-- [inkproof-coordination#4](https://github.com/tentenths/inkproof-coordination/pull/4): answers the Mathlib open question in `REQUIREMENTS.md`.
+- [inkproof-core#4](https://github.com/tentenths/inkproof-core/pull/4): series and segments (CORE-1 to CORE-3); Core's first public API, so `API.lock` needs your review. The coordinator's scope comment asks for proofs, or recorded obstacles, for `splitWhere`, `ofPoints?` and `ofUnsorted`.
+- [inkproof-core#5](https://github.com/tentenths/inkproof-core/pull/5): aggregates (CORE-5), stacked on #4; `API.lock` again. The coordinator's scope comment asks for proofs, or recorded obstacles, that each aggregate computes what its name says, which the central min/max guarantee depends on.
 
 ## Issues labelled `needs-approval`
 
