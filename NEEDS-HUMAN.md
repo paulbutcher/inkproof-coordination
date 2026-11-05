@@ -2,7 +2,7 @@
 
 ## Decisions and actions
 
-- **Licence.** The file header in CLAUDE.md says Apache 2.0 and refers to a `LICENSE` file, but no repository has one and REQUIREMENTS.md still lists the licence as open. Confirm, so agents add `LICENSE`.
+None.
 
 ## Pull requests waiting for you
 
