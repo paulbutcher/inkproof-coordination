@@ -275,7 +275,7 @@ The largest risk is dependence on Lasm, a young single-maintainer project; the l
 Open questions:
 
 - [ ] Which raster model to adopt: aliased coverage only, or a model that includes anti-aliasing?
-- [ ] Is Mathlib needed at all, and does it work under Lasm without runtime cost?
+- [x] Is Mathlib needed at all, and does it work under Lasm without runtime cost? Not used for now; revisit if a proof needs it. It builds and runs under Lasm at Lean v4.35.0, but importing it into a module a program links costs about 350 KB brotli and 100 ms of startup even with no runtime use, while a dependency never imported costs nothing (tentenths/inkproof-core#2).
 - [ ] What compressed size does Lasm's runtime add, and what SIZE-1 target follows?
 - [ ] Can Lasm's binding generator be reused for GPU-5, or is a separate generator needed?
 - [ ] How much of the GLSL ES precision model must be formalised for PROOF-6 and PROOF-15?
