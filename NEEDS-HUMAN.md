@@ -6,6 +6,7 @@ None.
 
 ## Pull requests waiting for you
 
+- [inkproof-coordination#7](https://github.com/tentenths/inkproof-coordination/pull/7): CLAUDE.md rule and PROC-6, requiring theorems that state what each public function computes. Your template for new repositories needs the same CLAUDE.md change.
 - [inkproof-core#4](https://github.com/tentenths/inkproof-core/pull/4): series and segments (CORE-1 to CORE-3); Core's first public API, so `API.lock` needs your review. The coordinator's scope findings are resolved: the constructors and `splitWhere` are now proved correct.
 - [inkproof-core#5](https://github.com/tentenths/inkproof-core/pull/5): aggregates (CORE-5), stacked on #4; `API.lock` again. Scope findings resolved: each aggregate is now proved to compute what its name says.
 - [inkproof-core#8](https://github.com/tentenths/inkproof-core/pull/8): deletes the stray `.env` and ignores it (request inkproof-core#6).
