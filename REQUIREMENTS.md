@@ -134,7 +134,7 @@ The central deliverable is an end-to-end theorem: for every pixel column, the dr
 ### Floating-point strategy
 
 - **FP-1** Algorithms are written and proved generically over linear orders, then instantiated for concrete types.
-- **FP-2** The float instance relies on one documented axiom: float comparison is a total order on non-NaN values. A NaN-free wrapper type enforces the precondition.
+- **FP-2** The float instance relies on one documented axiom: float comparison is a total order on values that are neither NaN nor `-0.0`, which compares equal to `0.0` but is a different value. A wrapper type enforces the precondition, rejecting NaN and turning `-0.0` into `0.0`.
 - **FP-3** Where rounding matters (data-to-pixel mapping), properties are proved over real numbers with an explicit sub-pixel error bound for the float implementation; bit-exact float proofs are not required.
 - **FP-4** Integer and fixed-point instances are provided so consumers with integer timestamps get exact binning.
 - **FP-5** Shader arithmetic is modelled using the precision requirements of the GLSL ES 3.00 specification for `highp` operations, not assumed to be exact IEEE arithmetic.
@@ -205,7 +205,7 @@ Proofs cover the Lean source down to the GPU command list and shader expressions
 | Lean compiler and runtime | Compiles proved source | Differential tests between native and Lasm builds |
 | Lasm compiler, runtime, Emscripten | Compiles Lean to Wasm | Same differential tests; pin versions |
 | Browser, GPU driver | Execute WebGL calls and shaders | Visual checks on a device matrix; GPUs assumed to meet GLSL ES precision rules (FP-5); known driver issues documented |
-| Float-order axiom (FP-2) | Lean floats are opaque to proofs | One reviewed axiom; NaN-free wrapper type |
+| Float-order axiom (FP-2) | Lean floats are opaque to proofs | One reviewed axiom; wrapper type excluding NaN and `-0.0`; axiom tested on each platform's floats |
 | Host text measurement | Used by label layout (PROOF-13) | Stated as a hypothesis of the theorem |
 | Time-zone data (SCALE-5) | External data | Versioned and stated as an input |
 

@@ -16,6 +16,7 @@ Other open requests: [inkproof-scale#3](https://github.com/tentenths/inkproof-sc
 
 - No library uses Mathlib for now; revisit if a proof needs it (2026-11-05, on [inkproof-core#2](https://github.com/tentenths/inkproof-core/issues/2)).
 - Every repository is licensed under Apache 2.0 (2026-11-05).
+- FP-2's axiom excludes `-0.0` as well as NaN, matching inkproof-core#14 (2026-11-05).
 - Every public operation gets a theorem stating what it computes, not only its laws (PROC-6, CLAUDE.md); the Core and Scale briefs are amended to match (2026-11-05).
 - Libraries generate `API.lock` with Core's `api-lock` executable, run from their own `scripts/api-lock.sh` once they depend on a Core release; none writes its own (2026-11-05, same issue; usage in Core's `DESIGN.md`).
 
