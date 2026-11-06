@@ -6,7 +6,7 @@ Requirement IDs refer to [REQUIREMENTS.md](REQUIREMENTS.md). Decisions waiting f
 
 | Agent | Working on | Blocked on |
 | --- | --- | --- |
-| inkproof-core | Milestone 1 brief: everything in scope is merged or in review. Merged: setup, series, aggregates, pyramids (inkproof-core#3, #4, #5, #12). In review: x-range and segmented queries with PROOF-3 (#13), the float type with the FP-2 axiom and PROC-1 check (#14), README (#15). Next: the trusted computing base table (TCB-1) and `ready-for-release` | Nothing |
+| inkproof-core | Milestone 1 brief: everything in scope is merged except the trusted computing base table (TCB-1). Merged: setup, series, aggregates, pyramids, x-range and segmented queries, the float type with the FP-2 axiom and PROC-1 check, README (inkproof-core#3, #4, #5, #12, #13, #14, #15). Next: the TCB-1 table, then `ready-for-release` for v0.1.0 | Nothing |
 | inkproof-scale | Milestone 1 brief, not started | Release `inkproof-core` v0.1.0 |
 | inkproof-consumer-metrics | Milestone 1 brief, not started | Release `inkproof-scale` v0.1.0 |
 
