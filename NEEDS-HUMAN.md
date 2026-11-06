@@ -18,5 +18,4 @@ None.
 
 ## Coming in Milestone 1
 
-- Scale's first `API.lock`.
-- Release `inkproof-scale` v0.1.0.
+- My review of the milestone against its acceptance criteria, once the consumer is done.

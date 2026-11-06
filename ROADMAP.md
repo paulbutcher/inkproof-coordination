@@ -7,10 +7,10 @@ Requirement IDs refer to [REQUIREMENTS.md](REQUIREMENTS.md). Decisions waiting f
 | Agent | Working on | Blocked on |
 | --- | --- | --- |
 | inkproof-core | Milestone 1 brief done: `v0.1.0` released and verified (inkproof-core#2). Nothing until Milestone 2 | Nothing |
-| inkproof-scale | Milestone 1 brief, unblocked; setup first | Nothing |
-| inkproof-consumer-metrics | Milestone 1 brief, not started | Release `inkproof-scale` v0.1.0 |
+| inkproof-scale | Milestone 1 brief done: `v0.1.0` released and verified (inkproof-scale#2); `CHANGELOG.md` entry for it still to add | Nothing |
+| inkproof-consumer-metrics | Milestone 1 brief, unblocked; setup first | Nothing |
 
-Other open requests: [inkproof-scale#3](https://github.com/tentenths/inkproof-scale/issues/3) and [inkproof-consumer-metrics#2](https://github.com/tentenths/inkproof-consumer-metrics/issues/2) (add the Apache 2.0 `LICENSE`, with their setup); [inkproof-scale#4](https://github.com/tentenths/inkproof-scale/issues/4) and [inkproof-consumer-metrics#3](https://github.com/tentenths/inkproof-consumer-metrics/issues/3) (CLAUDE.md: theorems stating what each public function computes, verbatim; Scale and the consumer with their setup).
+Other open requests: [inkproof-consumer-metrics#2](https://github.com/tentenths/inkproof-consumer-metrics/issues/2) (Apache 2.0 `LICENSE`) and [inkproof-consumer-metrics#3](https://github.com/tentenths/inkproof-consumer-metrics/issues/3) (CLAUDE.md), both with its setup.
 
 ## Decisions
 
@@ -37,7 +37,7 @@ Everything else is out of scope, including CORE-4, CORE-7, CORE-8, FP-3, FP-4, t
 
 1. Done: Core set up its package and test subproject, reported on Mathlib under Lasm, and the human decided against Mathlib for now.
 2. Done: Core delivered its brief and the human released `inkproof-core` v0.1.0 (2026-11-06).
-3. Scale starts on Core v0.1.0 and delivers its brief; the human releases `inkproof-scale` v0.1.0.
+3. Done: Scale delivered its brief and the human released `inkproof-scale` v0.1.0 (2026-11-06).
 4. The consumer starts on both releases. Requests it files go to Core or Scale, which change and release before the consumer upgrades; the consumer never works around them.
 5. The coordinator reviews each library's `API.lock` against the requirements and the milestone against these criteria.
 
