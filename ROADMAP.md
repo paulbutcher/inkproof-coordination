@@ -8,9 +8,9 @@ Requirement IDs refer to [REQUIREMENTS.md](REQUIREMENTS.md). Decisions waiting f
 | --- | --- | --- |
 | inkproof-core | Milestone 1 brief done: `v0.1.0` released and verified (inkproof-core#2). Nothing until Milestone 2 | Nothing |
 | inkproof-scale | Milestone 1 brief done: `v0.1.0` released and verified (inkproof-scale#2); `CHANGELOG.md` entry for it still to add | Nothing |
-| inkproof-consumer-metrics | Milestone 1 brief, unblocked; setup first | Nothing |
+| inkproof-consumer-metrics | Milestone 1 brief done and verified (inkproof-consumer-metrics#1, #4) | Nothing |
 
-Other open requests: [inkproof-consumer-metrics#2](https://github.com/tentenths/inkproof-consumer-metrics/issues/2) (Apache 2.0 `LICENSE`) and [inkproof-consumer-metrics#3](https://github.com/tentenths/inkproof-consumer-metrics/issues/3) (CLAUDE.md), both with its setup.
+Other open requests, all from the consumer: [inkproof-scale#6](https://github.com/tentenths/inkproof-scale/issues/6) (README `require` line and release rows; documentation only, wanted before Milestone 1 closes); [inkproof-core#18](https://github.com/tentenths/inkproof-core/issues/18) (gap predicate that sees readings) and [inkproof-core#19](https://github.com/tentenths/inkproof-core/issues/19) (segmented query over overlapping segments only), planned for Milestone 2.
 
 ## Decisions
 
@@ -38,17 +38,23 @@ Everything else is out of scope, including CORE-4, CORE-7, CORE-8, FP-3, FP-4, t
 1. Done: Core set up its package and test subproject, reported on Mathlib under Lasm, and the human decided against Mathlib for now.
 2. Done: Core delivered its brief and the human released `inkproof-core` v0.1.0 (2026-11-06).
 3. Done: Scale delivered its brief and the human released `inkproof-scale` v0.1.0 (2026-11-06).
-4. The consumer starts on both releases. Requests it files go to Core or Scale, which change and release before the consumer upgrades; the consumer never works around them.
-5. The coordinator reviews each library's `API.lock` against the requirements and the milestone against these criteria.
+4. Done: the consumer started on both releases. Requests it files go to Core or Scale, which change and release before the consumer upgrades; the consumer never works around them.
+5. Done (2026-11-06), see below: the coordinator reviews each library's `API.lock` against the requirements and the milestone against these criteria.
 
 ### Acceptance criteria
 
-- [ ] `inkproof-core` v0.1.0 and `inkproof-scale` v0.1.0 are released on Lean v4.35.0, each meeting its brief's acceptance criteria.
-- [ ] Both libraries build without warnings and pass their tests natively and compiled with Lasm, from the same source, with no Lasm or npm dependency outside their test subprojects (PLAT-1, ARCH-3 in part).
-- [ ] PROOF-1, PROOF-2, PROOF-3 and PROOF-5 are proved without `sorry`, stated in full generality, and recorded in `API.lock` with plain-English statements (PROC-3); the only axiom beyond Lean's own is FP-2's (PROC-1).
+- [x] `inkproof-core` v0.1.0 and `inkproof-scale` v0.1.0 are released on Lean v4.35.0, each meeting its brief's acceptance criteria.
+- [x] Both libraries build without warnings and pass their tests natively and compiled with Lasm, from the same source, with no Lasm or npm dependency outside their test subprojects (PLAT-1, ARCH-3 in part).
+- [x] PROOF-1, PROOF-2, PROOF-3 and PROOF-5 are proved without `sorry`, stated in full generality, and recorded in `API.lock` with plain-English statements (PROC-3); the only axiom beyond Lean's own is FP-2's (PROC-1).
 - [x] The Mathlib question is answered and recorded in `REQUIREMENTS.md`.
-- [ ] `inkproof-consumer-metrics` builds and passes its tests in CI against those releases only, and applies the published theorems to its own types (VAL-2).
-- [ ] Every request filed during the milestone is verified and closed, or deferred to a named milestone.
+- [x] `inkproof-consumer-metrics` builds and passes its tests in CI against those releases only, and applies the published theorems to its own types (VAL-2).
+- [ ] Every request filed during the milestone is verified and closed, or deferred to a named milestone. Open: inkproof-scale#6.
+
+### Review
+
+- Every brief is verified against its release; the briefs' scope was met with nothing out of scope, and no consumer worked around a library.
+- PROOF-5 holds for ordered fields, not `Float`, as Scale documents; the consumer used `Rat` for that reason. A browser renderer will want floats, so Milestone 2 must settle how proved scales reach them (FP-3).
+- Scale's `CHANGELOG.md` lacks its `0.1.0` entry; asked on inkproof-scale#2.
 
 ## Later milestones
 
