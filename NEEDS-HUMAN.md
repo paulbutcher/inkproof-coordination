@@ -18,6 +18,5 @@ None.
 
 ## Coming in Milestone 1
 
-- The first non-empty `API.lock` of Core, and Scale's first.
-- Core's axiom file, including the FP-2 float-order axiom (PROC-1).
-- Releases `inkproof-core` v0.1.0, then `inkproof-scale` v0.1.0.
+- Scale's first `API.lock`.
+- Release `inkproof-scale` v0.1.0.
