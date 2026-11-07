@@ -6,7 +6,7 @@ Requirement IDs refer to [REQUIREMENTS.md](REQUIREMENTS.md). Decisions waiting f
 
 | Agent | Working on | Blocked on |
 | --- | --- | --- |
-| inkproof-core | Milestone 1 brief done: `v0.1.0` released and verified (inkproof-core#2). inkproof-core#18 in [inkproof-core#20](https://github.com/tentenths/inkproof-core/pull/20), whose `api-lock` verdict passed (2026-11-07) and which waits for the human's code-owner review; #19 in [inkproof-core#21](https://github.com/tentenths/inkproof-core/pull/21), which matches it, whose `api-lock` verdict passed (2026-11-07) and which also waits for that review. Both approved by the human (2026-11-07) and planned for Milestone 2 | Nothing |
+| inkproof-core | Milestone 1 brief done: `v0.1.0` released and verified (inkproof-core#2). inkproof-core#18 in [inkproof-core#20](https://github.com/tentenths/inkproof-core/pull/20) and #19 in [inkproof-core#21](https://github.com/tentenths/inkproof-core/pull/21), each matching its request and planned for Milestone 2; both are behind `main` and need updating, then a fresh `api-lock` verdict for the new head | Nothing |
 | inkproof-scale | Milestone 1 brief done: `v0.1.0` released and verified (inkproof-scale#2); `CHANGELOG.md` entry for it still to add | Nothing |
 | inkproof-consumer-metrics | Milestone 1 brief done and verified (inkproof-consumer-metrics#1, #4) | Nothing |
 
@@ -19,6 +19,7 @@ Other open requests, all from the consumer: [inkproof-scale#6](https://github.co
 - FP-2's axiom excludes `-0.0` as well as NaN, matching inkproof-core#14 (2026-11-05).
 - Every public operation gets a theorem stating what it computes, not only its laws (PROC-6, CLAUDE.md); the Core and Scale briefs are amended to match (2026-11-05).
 - Libraries generate `API.lock` with Core's `api-lock` executable, run from their own `scripts/api-lock.sh` once they depend on a Core release; none writes its own (2026-11-05, same issue; usage in Core's `DESIGN.md`).
+- Core is at autonomy level 3: the human removed `/API.lock` from its CODEOWNERS, so its `API.lock` changes need the coordinator's `api-lock` verdict, not the human's review, and the coordinator releases it (2026-11-07).
 - The coordinator merges its own pull requests that touch only `ROADMAP.md` and `NEEDS-HUMAN.md`; `CODEOWNERS` keeps requirements, `CLAUDE.md`, the licence and `.github/` waiting for the human (2026-11-06, inkproof-coordination#10).
 
 ## Milestone 1: proved aggregation and linear scales
