@@ -10,7 +10,7 @@ Requirement IDs refer to [REQUIREMENTS.md](REQUIREMENTS.md). Decisions waiting f
 | inkproof-scale | Milestone 1 brief done: `v0.1.0` released and verified (inkproof-scale#2); `CHANGELOG.md` entry for it still to add | Nothing |
 | inkproof-consumer-metrics | Milestone 1 brief done and verified (inkproof-consumer-metrics#1, #4) | Nothing |
 
-Other open requests, all from the consumer: [inkproof-scale#6](https://github.com/tentenths/inkproof-scale/issues/6) (README `require` line and release rows; documentation only, wanted before Milestone 1 closes); [inkproof-core#18](https://github.com/tentenths/inkproof-core/issues/18) (gap predicate that sees readings) and [inkproof-core#19](https://github.com/tentenths/inkproof-core/issues/19) (segmented query over overlapping segments only), planned for Milestone 2.
+Other open requests, all from the consumer: [inkproof-scale#6](https://github.com/tentenths/inkproof-scale/issues/6) (README `require` line and release rows; documentation only, wanted before Milestone 1 closes), answered by [inkproof-scale#7](https://github.com/tentenths/inkproof-scale/pull/7), which matches the request; [inkproof-core#18](https://github.com/tentenths/inkproof-core/issues/18) (gap predicate that sees readings) and [inkproof-core#19](https://github.com/tentenths/inkproof-core/issues/19) (segmented query over overlapping segments only), planned for Milestone 2.
 
 ## Decisions
 
@@ -48,7 +48,7 @@ Everything else is out of scope, including CORE-4, CORE-7, CORE-8, FP-3, FP-4, t
 - [x] PROOF-1, PROOF-2, PROOF-3 and PROOF-5 are proved without `sorry`, stated in full generality, and recorded in `API.lock` with plain-English statements (PROC-3); the only axiom beyond Lean's own is FP-2's (PROC-1).
 - [x] The Mathlib question is answered and recorded in `REQUIREMENTS.md`.
 - [x] `inkproof-consumer-metrics` builds and passes its tests in CI against those releases only, and applies the published theorems to its own types (VAL-2).
-- [ ] Every request filed during the milestone is verified and closed, or deferred to a named milestone. Open: inkproof-scale#6.
+- [ ] Every request filed during the milestone is verified and closed, or deferred to a named milestone. Open: inkproof-scale#6, with inkproof-scale#7 pending.
 
 ### Review
 
