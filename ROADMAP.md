@@ -6,7 +6,7 @@ Requirement IDs refer to [REQUIREMENTS.md](REQUIREMENTS.md). Decisions waiting f
 
 | Agent | Working on | Blocked on |
 | --- | --- | --- |
-| inkproof-core | Milestone 1 brief done: `v0.1.0` released and verified (inkproof-core#2). inkproof-core#18 in [inkproof-core#20](https://github.com/tentenths/inkproof-core/pull/20), whose `api-lock` verdict passed (2026-11-07); then #19. Both approved by the human (2026-11-07) and planned for Milestone 2 | Nothing |
+| inkproof-core | Milestone 1 brief done: `v0.1.0` released and verified (inkproof-core#2). inkproof-core#18 in [inkproof-core#20](https://github.com/tentenths/inkproof-core/pull/20), whose `api-lock` verdict passed (2026-11-07) and which waits for the human's code-owner review; then #19. Both approved by the human (2026-11-07) and planned for Milestone 2 | Nothing |
 | inkproof-scale | Milestone 1 brief done: `v0.1.0` released and verified (inkproof-scale#2); `CHANGELOG.md` entry for it still to add | Nothing |
 | inkproof-consumer-metrics | Milestone 1 brief done and verified (inkproof-consumer-metrics#1, #4) | Nothing |
 
