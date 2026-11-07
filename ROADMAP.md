@@ -6,11 +6,11 @@ Requirement IDs refer to [REQUIREMENTS.md](REQUIREMENTS.md). Decisions waiting f
 
 | Agent | Working on | Blocked on |
 | --- | --- | --- |
-| inkproof-core | Milestone 1 brief done: `v0.1.0` released and verified (inkproof-core#2). Next: inkproof-core#18 and #19, both approved by the human (2026-11-07) and planned for Milestone 2 | Nothing |
+| inkproof-core | Milestone 1 brief done: `v0.1.0` released and verified (inkproof-core#2). inkproof-core#18 in [inkproof-core#20](https://github.com/tentenths/inkproof-core/pull/20), whose `api-lock` verdict passed (2026-11-07); then #19. Both approved by the human (2026-11-07) and planned for Milestone 2 | Nothing |
 | inkproof-scale | Milestone 1 brief done: `v0.1.0` released and verified (inkproof-scale#2); `CHANGELOG.md` entry for it still to add | Nothing |
 | inkproof-consumer-metrics | Milestone 1 brief done and verified (inkproof-consumer-metrics#1, #4) | Nothing |
 
-Other open requests, all from the consumer: [inkproof-scale#6](https://github.com/tentenths/inkproof-scale/issues/6) (README `require` line and release rows; documentation only, wanted before Milestone 1 closes), answered by [inkproof-scale#7](https://github.com/tentenths/inkproof-scale/pull/7), which matches the request; [inkproof-core#18](https://github.com/tentenths/inkproof-core/issues/18) (gap predicate that sees readings) and [inkproof-core#19](https://github.com/tentenths/inkproof-core/issues/19) (segmented query over overlapping segments only), accepted with their `API.lock` changes approved by the human (2026-11-07) and planned for Milestone 2; the consumer upgrades only after Core releases them.
+Other open requests, all from the consumer: [inkproof-scale#6](https://github.com/tentenths/inkproof-scale/issues/6) (README `require` line and release rows; documentation only, wanted before Milestone 1 closes), answered by [inkproof-scale#7](https://github.com/tentenths/inkproof-scale/pull/7), which matches the request; [inkproof-core#18](https://github.com/tentenths/inkproof-core/issues/18) (gap predicate that sees readings) and [inkproof-core#19](https://github.com/tentenths/inkproof-core/issues/19) (segmented query over overlapping segments only), accepted with their `API.lock` changes approved by the human (2026-11-07) and planned for Milestone 2, #18 answered by inkproof-core#20, which matches it; the consumer upgrades only after Core releases them.
 
 ## Decisions
 
