@@ -8,7 +8,7 @@
 
 - [inkproof-scale#7](https://github.com/tentenths/inkproof-scale/pull/7): approved, checks pass and up to date, but auto-merge is not enabled; it needs merging to answer inkproof-scale#6.
 - [inkproof-core#20](https://github.com/tentenths/inkproof-core/pull/20): checks pass, including the `api-lock` verdict, and auto-merge is on, but it changes `API.lock`, which Core's CODEOWNERS gives to you; it needs your review to merge and answer inkproof-core#18.
-- [inkproof-core#21](https://github.com/tentenths/inkproof-core/pull/21): `api-lock` verdict passed for its head (7da8bd2), other checks still running; it changes `API.lock`, so it needs your review to merge and answer inkproof-core#19.
+- [inkproof-core#21](https://github.com/tentenths/inkproof-core/pull/21): checks pass, including the `api-lock` verdict for its head (7da8bd2), and auto-merge is on; it changes `API.lock`, so it also needs your review to merge and answer inkproof-core#19.
 
 ## Issues labelled `needs-approval`
 
