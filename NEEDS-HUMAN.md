@@ -6,7 +6,7 @@
 
 ## Pull requests waiting for you
 
-None.
+- [inkproof-scale#7](https://github.com/tentenths/inkproof-scale/pull/7): approved, checks pass and up to date, but auto-merge is not enabled; it needs merging to answer inkproof-scale#6.
 
 ## Issues labelled `needs-approval`
 
