@@ -6,7 +6,7 @@ Requirement IDs refer to [REQUIREMENTS.md](REQUIREMENTS.md). Decisions waiting f
 
 | Agent | Working on | Blocked on |
 | --- | --- | --- |
-| inkproof-core | Milestone 1 brief done: `v0.1.0` released and verified (inkproof-core#2). inkproof-core#18 and #19 merged ([inkproof-core#20](https://github.com/tentenths/inkproof-core/pull/20), [#21](https://github.com/tentenths/inkproof-core/pull/21)), each matching its request with `api-lock` verdicts passed; `v0.2.0` waits for its `CHANGELOG.md` entry to cover `splitWherePoints` and for #18 to be labelled `ready-for-release`, then the coordinator releases both (asked on inkproof-core#18) | Nothing |
+| inkproof-core | Milestone 1 brief done: `v0.1.0` released and verified (inkproof-core#2). inkproof-core#18 and #19 merged ([inkproof-core#20](https://github.com/tentenths/inkproof-core/pull/20), [#21](https://github.com/tentenths/inkproof-core/pull/21)), each matching its request with `api-lock` verdicts passed; `v0.2.0` waits for [inkproof-core#23](https://github.com/tentenths/inkproof-core/pull/23), which adds `splitWherePoints` to its `CHANGELOG.md` entry and matches what was asked, to merge and for #18 to be labelled `ready-for-release`, then the coordinator releases both | Nothing |
 | inkproof-scale | Milestone 1 brief done: `v0.1.0` released and verified (inkproof-scale#2); `CHANGELOG.md` entry for it still to add | Nothing |
 | inkproof-consumer-metrics | Milestone 1 brief done and verified (inkproof-consumer-metrics#1, #4) | Nothing |
 
