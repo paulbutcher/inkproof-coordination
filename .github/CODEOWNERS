@@ -1,7 +1,0 @@
-# With "require review from code owners" on main, any pull request touching
-# these paths waits for this review; pull requests touching only the status
-# files need none.
-/REQUIREMENTS.md   @paulbutcher
-/CLAUDE.md         @paulbutcher
-/LICENSE           @paulbutcher
-/.github/          @paulbutcher
