@@ -6,15 +6,15 @@ Requirement IDs refer to [REQUIREMENTS.md](REQUIREMENTS.md). Decisions waiting f
 
 | Agent | Working on | Blocked on |
 | --- | --- | --- |
-| inkproof-core | Milestone 1 brief done: `v0.1.0` released and verified (inkproof-core#2). inkproof-core#18 and #19 merged ([inkproof-core#20](https://github.com/tentenths/inkproof-core/pull/20), [#21](https://github.com/tentenths/inkproof-core/pull/21)), each matching its request with `api-lock` verdicts passed; `v0.2.0` waits for [inkproof-core#23](https://github.com/tentenths/inkproof-core/pull/23), which adds `splitWherePoints` to its `CHANGELOG.md` entry and matches what was asked, to merge and for #18 to be labelled `ready-for-release`, then the coordinator releases both | Nothing |
+| inkproof-core | Milestone 1 brief done: `v0.1.0` released and verified (inkproof-core#2). inkproof-core#18 and #19 merged ([inkproof-core#20](https://github.com/paulbutcher/inkproof-core/pull/20), [#21](https://github.com/paulbutcher/inkproof-core/pull/21)), each matching its request with `api-lock` verdicts passed; `v0.2.0` waits for [inkproof-core#23](https://github.com/paulbutcher/inkproof-core/pull/23), which adds `splitWherePoints` to its `CHANGELOG.md` entry and matches what was asked, to merge and for #18 to be labelled `ready-for-release`, then the coordinator releases both | Nothing |
 | inkproof-scale | Milestone 1 brief done: `v0.1.0` released and verified (inkproof-scale#2); `CHANGELOG.md` entry for it still to add | Nothing |
 | inkproof-consumer-metrics | Milestone 1 brief done and verified (inkproof-consumer-metrics#1, #4) | Nothing |
 
-Other open requests, all from the consumer: [inkproof-scale#6](https://github.com/tentenths/inkproof-scale/issues/6) (README `require` line and release rows; documentation only, wanted before Milestone 1 closes), answered by [inkproof-scale#7](https://github.com/tentenths/inkproof-scale/pull/7), which matches the request; [inkproof-core#18](https://github.com/tentenths/inkproof-core/issues/18) (gap predicate that sees readings) and [inkproof-core#19](https://github.com/tentenths/inkproof-core/issues/19) (segmented query over overlapping segments only), planned for Milestone 2 and both merged; the consumer upgrades once Core releases `v0.2.0`.
+Other open requests, all from the consumer: [inkproof-scale#6](https://github.com/paulbutcher/inkproof-scale/issues/6) (README `require` line and release rows; documentation only, wanted before Milestone 1 closes), answered by [inkproof-scale#7](https://github.com/paulbutcher/inkproof-scale/pull/7), which matches the request; [inkproof-core#18](https://github.com/paulbutcher/inkproof-core/issues/18) (gap predicate that sees readings) and [inkproof-core#19](https://github.com/paulbutcher/inkproof-core/issues/19) (segmented query over overlapping segments only), planned for Milestone 2 and both merged; the consumer upgrades once Core releases `v0.2.0`.
 
 ## Decisions
 
-- No library uses Mathlib for now; revisit if a proof needs it (2026-11-05, on [inkproof-core#2](https://github.com/tentenths/inkproof-core/issues/2)).
+- No library uses Mathlib for now; revisit if a proof needs it (2026-11-05, on [inkproof-core#2](https://github.com/paulbutcher/inkproof-core/issues/2)).
 - Every repository is licensed under Apache 2.0 (2026-11-05).
 - FP-2's axiom excludes `-0.0` as well as NaN, matching inkproof-core#14 (2026-11-05).
 - Every public operation gets a theorem stating what it computes, not only its laws (PROC-6, CLAUDE.md); the Core and Scale briefs are amended to match (2026-11-05).
@@ -28,9 +28,9 @@ Establish the first two layers and prove a consumer can use them from released v
 
 | Library | In scope | Brief |
 | --- | --- | --- |
-| Inkproof.Core | Setup; CORE-1, CORE-2, CORE-3, CORE-5, CORE-6, FP-1, FP-2, PROOF-1, PROOF-2, PROOF-3 | [inkproof-core#2](https://github.com/tentenths/inkproof-core/issues/2) |
-| Inkproof.Scale | Linear scales only (part of SCALE-1), SCALE-2, PROOF-5 | [inkproof-scale#2](https://github.com/tentenths/inkproof-scale/issues/2) |
-| inkproof-consumer-metrics | Headless server-metrics consumer of both (VAL-3, VAL-2), native only | [inkproof-consumer-metrics#1](https://github.com/tentenths/inkproof-consumer-metrics/issues/1) |
+| Inkproof.Core | Setup; CORE-1, CORE-2, CORE-3, CORE-5, CORE-6, FP-1, FP-2, PROOF-1, PROOF-2, PROOF-3 | [inkproof-core#2](https://github.com/paulbutcher/inkproof-core/issues/2) |
+| Inkproof.Scale | Linear scales only (part of SCALE-1), SCALE-2, PROOF-5 | [inkproof-scale#2](https://github.com/paulbutcher/inkproof-scale/issues/2) |
+| inkproof-consumer-metrics | Headless server-metrics consumer of both (VAL-3, VAL-2), native only | [inkproof-consumer-metrics#1](https://github.com/paulbutcher/inkproof-consumer-metrics/issues/1) |
 
 Everything else is out of scope, including CORE-4, CORE-7, CORE-8, FP-3, FP-4, the other scale kinds, SCALE-3 to SCALE-6, Node builds (PLAT-8) and calendar time.
 

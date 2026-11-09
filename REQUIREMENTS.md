@@ -10,7 +10,7 @@ The libraries target applications that chart large numeric datasets interactivel
 
 The libraries must be a serious choice on ordinary grounds (performance, polish, API quality) and must also offer guarantees that conventional charting libraries cannot: every drawn pixel is justified by the data, nothing in the data that should be visible is lost, and interaction never corrupts the view.
 
-The libraries are named `Inkproof.Core`, `Inkproof.Scale` and so on, and each lives in its own repository in the `tentenths` GitHub organisation (`inkproof-core`, `inkproof-scale` and so on).
+The libraries are named `Inkproof.Core`, `Inkproof.Scale` and so on, and each lives in its own repository under the `paulbutcher` GitHub account (`inkproof-core`, `inkproof-scale` and so on).
 
 ## Design principles
 
@@ -276,7 +276,7 @@ The largest risk is dependence on Lasm, a young single-maintainer project; the l
 Open questions:
 
 - [ ] Which raster model to adopt: aliased coverage only, or a model that includes anti-aliasing?
-- [x] Is Mathlib needed at all, and does it work under Lasm without runtime cost? Not used for now; revisit if a proof needs it. It builds and runs under Lasm at Lean v4.35.0, but importing it into a module a program links costs about 350 KB brotli and 100 ms of startup even with no runtime use, while a dependency never imported costs nothing (tentenths/inkproof-core#2).
+- [x] Is Mathlib needed at all, and does it work under Lasm without runtime cost? Not used for now; revisit if a proof needs it. It builds and runs under Lasm at Lean v4.35.0, but importing it into a module a program links costs about 350 KB brotli and 100 ms of startup even with no runtime use, while a dependency never imported costs nothing (paulbutcher/inkproof-core#2).
 - [ ] What compressed size does Lasm's runtime add, and what SIZE-1 target follows?
 - [ ] Can Lasm's binding generator be reused for GPU-5, or is a separate generator needed?
 - [ ] How much of the GLSL ES precision model must be formalised for PROOF-6 and PROOF-15?
