@@ -6,11 +6,11 @@ Requirement IDs refer to [REQUIREMENTS.md](REQUIREMENTS.md). Decisions waiting f
 
 | Agent | Working on | Blocked on |
 | --- | --- | --- |
-| inkproof-core | Milestone 1 brief done: `v0.1.0` released and verified (inkproof-core#2). inkproof-core#18 and #19 merged ([inkproof-core#20](https://github.com/paulbutcher/inkproof-core/pull/20), [#21](https://github.com/paulbutcher/inkproof-core/pull/21)), each matching its request with `api-lock` verdicts passed; `v0.2.0` waits for [inkproof-core#23](https://github.com/paulbutcher/inkproof-core/pull/23), which adds `splitWherePoints` to its `CHANGELOG.md` entry and matches what was asked, to merge and for #18 to be labelled `ready-for-release`, then the coordinator releases both | Nothing |
-| inkproof-scale | Milestone 1 brief done: `v0.1.0` released and verified (inkproof-scale#2); `CHANGELOG.md` entry for it still to add | Nothing |
+| inkproof-core | Milestone 1 brief done: `v0.1.0` released and verified (inkproof-core#2). inkproof-core#18 and #19 merged and labelled `ready-for-release`, with `CHANGELOG.md` holding its `0.2.0` entry; Core is now at autonomy level 3, and the coordinator released `v0.2.0` (2026-11-10); the consumer upgrades next | Nothing |
+| inkproof-scale | Milestone 1 brief done: `v0.1.0` released and verified (inkproof-scale#2); `v0.1.1` released by the coordinator (2026-11-10): inkproof-scale#6's README fix, and `CHANGELOG.md` now has the `0.1.0` and `0.1.1` entries; the consumer upgrades and verifies | Nothing |
 | inkproof-consumer-metrics | Milestone 1 brief done and verified (inkproof-consumer-metrics#1, #4) | Nothing |
 
-Other open requests, all from the consumer: [inkproof-scale#6](https://github.com/paulbutcher/inkproof-scale/issues/6) (README `require` line and release rows; documentation only, wanted before Milestone 1 closes), answered by [inkproof-scale#7](https://github.com/paulbutcher/inkproof-scale/pull/7), which matches the request; [inkproof-core#18](https://github.com/paulbutcher/inkproof-core/issues/18) (gap predicate that sees readings) and [inkproof-core#19](https://github.com/paulbutcher/inkproof-core/issues/19) (segmented query over overlapping segments only), planned for Milestone 2 and both merged; the consumer upgrades once Core releases `v0.2.0`.
+Other open requests, all from the consumer: [inkproof-scale#6](https://github.com/paulbutcher/inkproof-scale/issues/6) (README `require` line and release rows; documentation only, wanted before Milestone 1 closes), answered by [inkproof-scale#7](https://github.com/paulbutcher/inkproof-scale/pull/7), released in Scale `v0.1.1` (the consumer verifies and closes); [inkproof-core#18](https://github.com/paulbutcher/inkproof-core/issues/18) (gap predicate that sees readings) and [inkproof-core#19](https://github.com/paulbutcher/inkproof-core/issues/19) (segmented query over overlapping segments only), planned for Milestone 2 both merged and released in Core `v0.2.0`; the consumer upgrades and verifies.
 
 ## Decisions
 
@@ -19,7 +19,7 @@ Other open requests, all from the consumer: [inkproof-scale#6](https://github.co
 - FP-2's axiom excludes `-0.0` as well as NaN, matching inkproof-core#14 (2026-11-05).
 - Every public operation gets a theorem stating what it computes, not only its laws (PROC-6, CLAUDE.md); the Core and Scale briefs are amended to match (2026-11-05).
 - Libraries generate `API.lock` with Core's `api-lock` executable, run from their own `scripts/api-lock.sh` once they depend on a Core release; none writes its own (2026-11-05, same issue; usage in Core's `DESIGN.md`).
-- Core is at autonomy level 3: the human removed `/API.lock` from its CODEOWNERS, so its `API.lock` changes need the coordinator's `api-lock` verdict, not the human's review, and the coordinator releases it (2026-11-07).
+- Core was at autonomy level 3 (2026-11-07), then level 1 (2026-11-09), and Core and Scale are at level 3 again (2026-11-10, inkproof-core#33, inkproof-scale#14): the coordinator reviews `API.lock` changes and releases. The consumer is not yet known to be at level 3.
 - The coordinator merges its own pull requests that touch only `ROADMAP.md` and `NEEDS-HUMAN.md`; `CODEOWNERS` keeps requirements, `CLAUDE.md`, the licence and `.github/` waiting for the human (2026-11-06, inkproof-coordination#10).
 
 ## Milestone 1: proved aggregation and linear scales
@@ -49,13 +49,13 @@ Everything else is out of scope, including CORE-4, CORE-7, CORE-8, FP-3, FP-4, t
 - [x] PROOF-1, PROOF-2, PROOF-3 and PROOF-5 are proved without `sorry`, stated in full generality, and recorded in `API.lock` with plain-English statements (PROC-3); the only axiom beyond Lean's own is FP-2's (PROC-1).
 - [x] The Mathlib question is answered and recorded in `REQUIREMENTS.md`.
 - [x] `inkproof-consumer-metrics` builds and passes its tests in CI against those releases only, and applies the published theorems to its own types (VAL-2).
-- [ ] Every request filed during the milestone is verified and closed, or deferred to a named milestone. Open: inkproof-scale#6, with inkproof-scale#7 pending.
+- [ ] Every request filed during the milestone is verified and closed, or deferred to a named milestone. Open: inkproof-scale#6 (released in v0.1.1, awaiting verification), inkproof-core#18 and #19 (released in v0.2.0, awaiting verification).
 
 ### Review
 
 - Every brief is verified against its release; the briefs' scope was met with nothing out of scope, and no consumer worked around a library.
 - PROOF-5 holds for ordered fields, not `Float`, as Scale documents; the consumer used `Rat` for that reason. A browser renderer will want floats, so Milestone 2 must settle how proved scales reach them (FP-3).
-- Scale's `CHANGELOG.md` lacks its `0.1.0` entry; asked on inkproof-scale#2.
+- Scale's `CHANGELOG.md` now has its `0.1.0` entry (inkproof-scale#15).
 
 ## Later milestones
 
