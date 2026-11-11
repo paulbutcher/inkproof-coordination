@@ -49,7 +49,11 @@ Everything else is out of scope, including CORE-4, CORE-7, CORE-8, FP-3, FP-4, t
 - [x] PROOF-1, PROOF-2, PROOF-3 and PROOF-5 are proved without `sorry`, stated in full generality, and recorded in `API.lock` with plain-English statements (PROC-3); the only axiom beyond Lean's own is FP-2's (PROC-1).
 - [x] The Mathlib question is answered and recorded in `REQUIREMENTS.md`.
 - [x] `inkproof-consumer-metrics` builds and passes its tests in CI against those releases only, and applies the published theorems to its own types (VAL-2).
-- [ ] Every request filed during the milestone is verified and closed, or deferred to a named milestone. Open: inkproof-scale#6 (released in v0.1.1, awaiting verification), inkproof-core#18 and #19 (released in v0.2.0, awaiting verification).
+- [x] Every request filed during the milestone is verified and closed: inkproof-scale#6 and inkproof-core#18 and #19 are closed, and no request is open on any repository (2026-11-11).
+
+### Acceptance
+
+Accepted by the coordinator on 2026-11-11: every criterion above is met on `main` (Core `v0.2.0`, Scale `v0.1.1`, consumer on both) and no fork is open. The Milestone 2 plan (below) is drafted next.
 
 ### Review
 
