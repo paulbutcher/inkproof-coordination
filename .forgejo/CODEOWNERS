@@ -1,7 +1,10 @@
-# Code owners for inkproof-coordination (scripts/setup-repo.sh checks this file).
+# Code owners for autonomy level 1 (scripts/setup-repo.sh checks this file).
 # Each line is a Go regular expression matched against a whole path, without
-# a leading slash; every matching line adds its owners, and a line starting
-# with ! adds them for every path it doesn't match. Each owner's review
-# request blocks the merge until they approve.
-.* @conformance
-!NEEDS-HUMAN\.md @paulbutcher
+# a leading slash; every matching line adds its owners, and each owner's
+# review request blocks the merge until they approve.
+.* @paulbutcher @conformance
+API\.lock @paulbutcher
+\.forgejo/.* @paulbutcher
+lean-toolchain @paulbutcher
+CLAUDE\.md @paulbutcher
+REQUIREMENTS\.md @paulbutcher
