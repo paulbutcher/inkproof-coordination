@@ -61,6 +61,19 @@ Accepted by the coordinator on 2026-11-11: every criterion above is met on `main
 - PROOF-5 holds for ordered fields, not `Float`, as Scale documents; the consumer used `Rat` for that reason. A browser renderer will want floats, so Milestone 2 must settle how proved scales reach them (FP-3).
 - Scale's `CHANGELOG.md` now has its `0.1.0` entry (inkproof-scale#15).
 
+## Milestone 2: remaining Core and Scale
+
+Complete the two lower libraries before Axis and Viewport build on them.
+
+| Library | In scope | Brief |
+| --- | --- | --- |
+| inkproof-core | CORE-4, CORE-7, CORE-8, FP-4 | [inkproof-core#34](https://github.com/paulbutcher/inkproof-core/issues/34) |
+| inkproof-scale | SCALE-1 (log, elapsed-duration, categorical), SCALE-4, SCALE-6 | [inkproof-scale#16](https://github.com/paulbutcher/inkproof-scale/issues/16) |
+
+Pending the human's decision on FP-3 (inkproof-coordination, "how Scale's proofs reach Float"): SCALE-3 and FP-3, briefed to Scale once decided. Deferred to a later milestone: SCALE-5 (calendar time), PLAT-8 (Node builds), VAL-6 (differential builds) and more simulated consumers (VAL-3), which need agents that do not exist yet.
+
+The two briefs are independent, so Core and Scale work in parallel.
+
 ## Later milestones
 
 An outline only; each milestone is planned in detail when the one before it is accepted, and most need agents that do not exist yet.
