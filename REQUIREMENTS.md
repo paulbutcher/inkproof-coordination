@@ -211,6 +211,7 @@ Proofs cover the Lean source down to the GPU command list and shader expressions
 | Lasm compiler, runtime, Emscripten | Compiles Lean to Wasm | Same differential tests; pin versions |
 | Browser, GPU driver | Execute WebGL calls and shaders | Visual checks on a device matrix; GPUs assumed to meet GLSL ES precision rules (FP-5); known driver issues documented |
 | Float-order axiom (FP-2) | Lean floats are opaque to proofs | One reviewed axiom; wrapper type excluding NaN and `-0.0`; axiom tested on each platform's floats |
+| Float rounding model (FP-3) | Lean floats are opaque to proofs | One reviewed axiom, in the IEEE 754 round-to-nearest form for binary64; tested on each platform's floats |
 | Host text measurement | Used by label layout (PROOF-13) | Stated as a hypothesis of the theorem |
 | Time-zone data (SCALE-5) | External data | Versioned and stated as an input |
 
