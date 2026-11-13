@@ -35,6 +35,11 @@ Arrows show data flow: the consumer drives Inkproof.Web, which hands GPU command
 - **ARCH-2** Two data interfaces separate the layers: the display list says what to draw, with a documented meaning under the raster model; the GPU command list says how, and is the only data passed to JavaScript.
 - **ARCH-3** Every library except Inkproof.Web builds natively, on Node and under Lasm from the same source.
 
+## Reuse
+
+- **REUSE-1** Before building something, check whether it already exists: in another Inkproof library, in Lean core, Std, Batteries or Mathlib, in the Lean libraries under the `paulbutcher` GitHub account, or on Reservoir. Use it when it meets PLAT-3 and can be pinned at a release; otherwise record in `DESIGN.md` what was considered and why it wasn't used. A dependency from outside the project is the human's decision.
+- **REUSE-2** No code is duplicated between Inkproof libraries. What more than one library needs lives in the lowest library they share, under ARCH-1.
+
 ## Functional requirements
 
 Each library has a single responsibility and a stable public API; requirement IDs are referenced by the verification and acceptance sections.
