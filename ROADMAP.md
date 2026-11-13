@@ -79,6 +79,22 @@ The briefs are independent, so Core and Scale work in parallel, and Scale's two 
 
 Accepted by the coordinator on 2026-11-12: all three briefs are verified against Core `v0.4.0` and Scale `v0.3.0` on `main`, no fork is open, and the SCALE-3 error theorems state the bound for every input a renderer can supply, with hypotheses it can discharge. They cover binary64 only, as decided in inkproof-coordination#40. The review recommendations (inkproof-coordination#45 to #48) are the human's to accept or decline; Milestone 3 is drafted once they are answered.
 
+## Reuse cleanup
+
+Remove duplicated code between libraries (REUSE-1, REUSE-2), decided by the human on inkproof-coordination#46, #51 and #52 (2026-11-13). It runs alongside the Milestone 3 plan and lands before Axis starts, so Axis does not copy the harness.
+
+| Library | Brief | Order |
+| --- | --- | --- |
+| inkproof-core | [#39](https://github.com/paulbutcher/inkproof-core/issues/39) Float error lemmas, `ratAbs` replaced by `Rat.abs` | after inkproof-core#38 |
+| inkproof-core | [#40](https://github.com/paulbutcher/inkproof-core/issues/40) development-only test harness library and Plausible assessment | parallel |
+| inkproof-core | [#41](https://github.com/paulbutcher/inkproof-core/issues/41) `lowerBoundFrom` through `lowerBoundFromBy` | parallel |
+| inkproof-scale | [#28](https://github.com/paulbutcher/inkproof-scale/issues/28) use Lean core's natCast lemmas | any time |
+| inkproof-scale | [#29](https://github.com/paulbutcher/inkproof-scale/issues/29) use Core's error lemmas | blocked on inkproof-core#39 release |
+| inkproof-scale | [#30](https://github.com/paulbutcher/inkproof-scale/issues/30) use Core's harness | blocked on inkproof-core#40 release |
+| inkproof-consumer-metrics | [#9](https://github.com/paulbutcher/inkproof-consumer-metrics/issues/9) use Core's harness | blocked on inkproof-core#40 release |
+
+The human wants Plausible adopted unless the assessment in inkproof-core#40 finds significant downsides; if it does, it comes back to them. inkproof-coordination#47, #48 and #50 remain with the human.
+
 ## Later milestones
 
 An outline only; each milestone is planned in detail when the one before it is accepted, and most need agents that do not exist yet.
