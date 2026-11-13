@@ -69,10 +69,15 @@ Complete the two lower libraries before Axis and Viewport build on them.
 | --- | --- | --- |
 | inkproof-core | CORE-4, CORE-7, CORE-8, FP-4 | [inkproof-core#34](https://github.com/paulbutcher/inkproof-core/issues/34) |
 | inkproof-scale | SCALE-1 (log, elapsed-duration, categorical), SCALE-4, SCALE-6 | [inkproof-scale#16](https://github.com/paulbutcher/inkproof-scale/issues/16) |
+| inkproof-scale | SCALE-3, FP-3 | [inkproof-scale#17](https://github.com/paulbutcher/inkproof-scale/issues/17) |
 
-Pending the human's decision on FP-3 (inkproof-coordination, "how Scale's proofs reach Float"): SCALE-3 and FP-3, briefed to Scale once decided. Deferred to a later milestone: SCALE-5 (calendar time), PLAT-8 (Node builds), VAL-6 (differential builds) and more simulated consumers (VAL-3), which need agents that do not exist yet.
+FP-3 decided by the human (2026-11-12, inkproof-coordination#40): option 1, a real-number model with an explicit error bound under one rounding axiom in the style of FP-2, limited at first to the linear and rebased maps (SCALE-3). Deferred to a later milestone: SCALE-5 (calendar time), PLAT-8 (Node builds), VAL-6 (differential builds) and more simulated consumers (VAL-3), which need agents that do not exist yet.
 
-The two briefs are independent, so Core and Scale work in parallel.
+The briefs are independent, so Core and Scale work in parallel, and Scale's two briefs do not block each other.
+
+### Acceptance
+
+Accepted by the coordinator on 2026-11-12: all three briefs are verified against Core `v0.4.0` and Scale `v0.3.0` on `main`, no fork is open, and the SCALE-3 error theorems state the bound for every input a renderer can supply, with hypotheses it can discharge. They cover binary64 only, as decided in inkproof-coordination#40. The review recommendations (inkproof-coordination#45 to #48) are the human's to accept or decline; Milestone 3 is drafted once they are answered.
 
 ## Later milestones
 
