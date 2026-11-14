@@ -5,6 +5,9 @@ Existing libraries that could serve Inkproof. Each line: what it offers, URL, an
 ## Lean core, Batteries, Mathlib
 
 - Lean core and Std (v4.35.0): `Float`, arrays, `HashMap`, `Std.Time`, `Std.Sat`, `Std.Do` and the standard proof automation. https://github.com/leanprover/lean4. Works under Lasm (the supported toolchain).
+- Lean core float model: `Float.Model`, `Float32.Model` and `UnpackedFloat` (Init/Data/Float/Model), a proved model of binary64 and binary32 arithmetic. Core proves `float_le_linear` from it (inkproof-core#50). Consider it before adding any float axiom.
+- Lean core `Rat`: `Rat.abs` and its lemmas, the basis of the relative-error work moved into Core (#46, #58).
+- Lean core `Array.binSearch` (Init/Data/Array/BinSearch.lean): binary search with no theorems about it in v4.35.0, so Core's `Series.lowerBoundFrom` is its own.
 - Batteries: extra data structures and lemmas (`BinaryHeap`, `RBMap`, list and array lemmas). https://github.com/leanprover-community/batteries. Known to work under Lasm only if a build is confirmed; unknown.
 - Mathlib: real analysis, order, algebra and lattice theory for proofs. https://github.com/leanprover-community/mathlib4. Not used (human's decision 2026-11-05); Core reported on it under Lasm, see inkproof-core#2. Proof modules only, never linked into a browser build (CLAUDE.md).
 
