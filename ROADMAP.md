@@ -95,6 +95,10 @@ Remove duplicated code between libraries (REUSE-1, REUSE-2), decided by the huma
 
 The human wants Plausible adopted unless the assessment in inkproof-core#40 finds significant downsides; if it does, it comes back to them. inkproof-coordination#47, #48 and #50 remain with the human.
 
+### Acceptance
+
+Accepted by the coordinator on 2026-11-14: all seven briefs are verified against Core `v0.6.0`, Scale `v0.5.1` and the consumer on `main`, with no new axiom and no sorry (inkproof-coordination#58). inkproof-coordination#47 and #50 remain with the human; Milestone 3 (Axis and Viewport) is drafted next.
+
 ## Later milestones
 
 An outline only; each milestone is planned in detail when the one before it is accepted, and most need agents that do not exist yet.
