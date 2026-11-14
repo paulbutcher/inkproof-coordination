@@ -101,9 +101,15 @@ Accepted by the coordinator on 2026-11-14: all seven briefs are verified against
 
 ## Float library
 
-Decided by the human on 2026-11-14: split the float model out of Core into `inkproof-float` (inkproof-coordination#61), with the format as a parameter (#47, option C), Scale's relative-error lemmas moved there (#62), the axiom check shared in Core's `InkproofTools.Test` (#63), and the reuse records completed (#64). The repository is the human's to create (inkproof-coordination#66); no brief is filed before it exists.
+Decided by the human on 2026-11-14: split the float model out of Core into `inkproof-float` (inkproof-coordination#61, repository created at level 3, #66), with the format as a parameter (#47, option C), Scale's relative-error lemmas moved there (#62), the axiom check shared (#63), and the reuse records completed (#64). InkproofTools (api-lock, test driver, harness, and the shared axiom check) moves out of Core into a new package, `inkproof-tools`, which every library depends on; it exists (agent devtools).
 
-Order: Float first (move, then format parameter, then #62's lemmas, then what #50 leaves of FP-3), then Core and Scale in parallel (each depends on the Float release), then the consumer. Milestone 3 (Axis and Viewport) waits for it, since both depend on the float model's final shape.
+Order:
+
+1. Float: move the model (inkproof-float#2), then the format parameter (#3), the relative-error lemmas (#4) and what is left of FP-3 (#5).
+2. inkproof-tools: move InkproofTools and the shared axiom check from Core (inkproof-tools#2). Then Float wires api-lock, the test driver and CODEOWNERS (inkproof-float#6; no Float release can be computed before it), and Core (inkproof-core#52), Scale (inkproof-scale#39) and the consumer (inkproof-consumer-metrics#13) switch to it.
+3. Core (inkproof-core#51) waits on the Float move release; Scale (inkproof-scale#38) waits on the lemmas release; the consumer (inkproof-consumer-metrics#12) follows both.
+
+Milestone 3 (Axis and Viewport) waits for it, since both depend on the float model's final shape.
 
 ## Later milestones
 
