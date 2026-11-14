@@ -99,6 +99,12 @@ The human wants Plausible adopted unless the assessment in inkproof-core#40 find
 
 Accepted by the coordinator on 2026-11-14: all seven briefs are verified against Core `v0.6.0`, Scale `v0.5.1` and the consumer on `main`, with no new axiom and no sorry (inkproof-coordination#58). inkproof-coordination#47 and #50 remain with the human; Milestone 3 (Axis and Viewport) is drafted next.
 
+## Float library
+
+Decided by the human on 2026-11-14: split the float model out of Core into `inkproof-float` (inkproof-coordination#61), with the format as a parameter (#47, option C), Scale's relative-error lemmas moved there (#62), the axiom check shared in Core's `InkproofTools.Test` (#63), and the reuse records completed (#64). The repository is the human's to create (inkproof-coordination#66); no brief is filed before it exists.
+
+Order: Float first (move, then format parameter, then #62's lemmas, then what #50 leaves of FP-3), then Core and Scale in parallel (each depends on the Float release), then the consumer. Milestone 3 (Axis and Viewport) waits for it, since both depend on the float model's final shape.
+
 ## Later milestones
 
 An outline only; each milestone is planned in detail when the one before it is accepted, and most need agents that do not exist yet.
