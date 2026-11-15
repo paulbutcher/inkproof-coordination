@@ -17,7 +17,7 @@ Existing libraries that could serve Inkproof. Each line: what it offers, URL, an
 - Data formats: lean-json, lean-cbor, protobuf, lean-markdown, lean-regular, lean-css, lean-html and lean-htmx, all at https://github.com/paulbutcher/<name>. Lasm unknown.
 - Server stack: lean-routing, lean-middleware, lean-webapp, lean-authentication, lean-jose, lean-telemetry, leanpostgres and the native bindings (leancurl, leanxml2, lean-aws, lean-llmclient, lean-mcp). Server-side or native; not for Lasm.
 - leanin: Tokio-style concurrency and work-stealing scheduler, with proofs. https://github.com/paulbutcher/leanin. Native; Lasm unknown. Check before writing any scheduling code.
-- lasm-todomvc: Lasm example application, the closest reference for browser structure. https://github.com/paulbutcher/lasm-todomvc. Works under Lasm.
+- lasm-todomvc: Lasm example application, the closest reference for browser structure. https://github.com/paulbutcher/lasm-todomvc. Works under Lasm. Lasm.Web, Lasm.UI and Lasm.JS are not a Lake dependency; they ship in `@lasm/cli`, documented in docs/ of https://github.com/Millillion/lasm.
 - Full list: https://github.com/paulbutcher?tab=repositories&language=lean. Archived or superseded: lean-forms, partition-when.
 
 ## Reservoir
