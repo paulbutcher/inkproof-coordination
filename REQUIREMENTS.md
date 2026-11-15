@@ -31,7 +31,7 @@ The set consists of eight libraries in strict layers; everything that decides wh
 
 Arrows show data flow: the consumer drives Inkproof.Web, which hands GPU command lists to the generated interpreter; everything in the shaded column is trusted rather than proved.
 
-- **ARCH-1** Dependencies: Scale uses Core; Axis uses Scale; Scene uses Core, Scale and Axis; Gpu uses Scene; Viewport uses Scale; Web uses Gpu and Viewport; Export uses Scene. No cycles, and no library imports consumer code.
+- **ARCH-1** Dependencies: Scale uses Core; Axis uses Scale; Scene uses Core, Scale and Axis; Gpu uses Scene; Viewport uses Scale; Web uses Core, Gpu and Viewport; Export uses Scene. No cycles, and no library imports consumer code.
 - **ARCH-2** Two data interfaces separate the layers: the display list says what to draw, with a documented meaning under the raster model; the GPU command list says how, and is the only data passed to JavaScript.
 - **ARCH-3** Every library except Inkproof.Web builds natively, on Node and under Lasm from the same source.
 
