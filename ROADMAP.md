@@ -128,7 +128,20 @@ The first brief in each library also wires its dependencies (Scale, Float, Tools
 
 ## Float format lemmas, Axis and Viewport, Review follow-ups 3
 
-Accepted by the coordinator on 2026-11-15 (inkproof-coordination#81, #82, #86): Float `v0.4.0` (rounding-unit lemmas moved down from Scale), Scale `v0.6.1`, Axis `v0.4.0` (AXIS-1 to AXIS-3) and Viewport `v0.2.0` (VIEW-1 to VIEW-4), all on `main` with no new axiom and no sorry. Reviews made no open recommendations. Milestone 4 (Scene) waits on the human: it needs a repository and agent, and the raster-model decision (inkproof-coordination#87).
+Accepted by the coordinator on 2026-11-15 (inkproof-coordination#81, #82, #86): Float `v0.4.0` (rounding-unit lemmas moved down from Scale), Scale `v0.6.1`, Axis `v0.4.0` (AXIS-1 to AXIS-3) and Viewport `v0.2.0` (VIEW-1 to VIEW-4), all on `main` with no new axiom and no sorry. Reviews made no open recommendations. Milestone 4 (Scene) is drafted below.
+
+## Milestone 4: Scene
+
+Decided by the human on 2026-11-15 (inkproof-coordination#87): `inkproof-scene` created at level 3; the raster model is aliased coverage, with anti-aliasing a documented difference under TCB-2. The coverage rule counts every pixel a primitive touches, not only pixels whose centre it covers, so thin features are never dropped (PROOF-4, ACC-2).
+
+| Library | In scope | Brief |
+| --- | --- | --- |
+| inkproof-scene | Setup, SCENE-1, SCENE-5 | [inkproof-scene#2](https://github.com/paulbutcher/inkproof-scene/issues/2) |
+| inkproof-scene | SCENE-3, SCENE-4, PROOF-8, PROOF-16 | [inkproof-scene#3](https://github.com/paulbutcher/inkproof-scene/issues/3), after #2 |
+| inkproof-scene | SCENE-6 | [inkproof-scene#4](https://github.com/paulbutcher/inkproof-scene/issues/4), after #2 |
+| inkproof-scene | SCENE-2, PROOF-4, PROOF-7 | [inkproof-scene#5](https://github.com/paulbutcher/inkproof-scene/issues/5), after #2 |
+
+After #2, the other three are independent. Gpu and Export (Milestone 5) follow the milestone's acceptance.
 
 ## Later milestones
 
