@@ -111,6 +111,21 @@ Order:
 
 Accepted by the coordinator on 2026-11-14: all twelve briefs across inkproof-float, inkproof-tools, Core, Scale and the consumer are verified on `main` (Float `v0.3.0`, Tools `v0.2.1`, Core `v0.7.0`, Scale `v0.6.0`, consumer `v0.1.1`), with no new axiom and no sorry; `float_rounding_model` and `float32_rounding_model` remain axioms with the obstacle recorded in Float's `DESIGN.md` (inkproof-coordination#73). Milestone 3 (Axis and Viewport) is drafted next.
 
+## Milestone 3: Axis and Viewport
+
+Decided by the human on 2026-11-15 (inkproof-coordination#75): create `inkproof-axis` and `inkproof-viewport` at level 3 and run them in parallel; they do not depend on each other (ARCH-1).
+
+| Library | In scope | Brief |
+| --- | --- | --- |
+| inkproof-axis | AXIS-1, PROOF-12 (ticks) | [inkproof-axis#2](https://github.com/paulbutcher/inkproof-axis/issues/2) |
+| inkproof-axis | AXIS-2, PROOF-12 (labels) | [inkproof-axis#3](https://github.com/paulbutcher/inkproof-axis/issues/3), after #2 |
+| inkproof-axis | AXIS-3, PROOF-13 | [inkproof-axis#4](https://github.com/paulbutcher/inkproof-axis/issues/4), after #2 |
+| inkproof-viewport | VIEW-1, VIEW-2, PROOF-9 | [inkproof-viewport#2](https://github.com/paulbutcher/inkproof-viewport/issues/2) |
+| inkproof-viewport | VIEW-3, PROOF-10 | [inkproof-viewport#3](https://github.com/paulbutcher/inkproof-viewport/issues/3), after #2 |
+| inkproof-viewport | VIEW-4 | [inkproof-viewport#4](https://github.com/paulbutcher/inkproof-viewport/issues/4), after #2 |
+
+The first brief in each library also wires its dependencies (Scale, Float, Tools at release tags; api-lock, test driver and axiom check from inkproof-tools).
+
 ## Later milestones
 
 An outline only; each milestone is planned in detail when the one before it is accepted, and most need agents that do not exist yet.
