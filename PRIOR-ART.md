@@ -8,6 +8,7 @@ Existing libraries that could serve Inkproof. Each line: what it offers, URL, an
 - Lean core float model: `Float.Model`, `Float32.Model` and `UnpackedFloat` (Init/Data/Float/Model), a proved model of binary64 and binary32 arithmetic. inkproof-float proves `float_le_linear` and the order and literal facts from it. Consider it before adding any float axiom.
 - Lean core `Rat`: `Rat.abs` and its basic lemmas; it has no `abs_add` or `abs_mul` family (v4.35.0 has only `Rat.abs_nonneg`). inkproof-float adds `rat_abs_add_le`, `rat_abs_mul`, `rat_abs_le_iff` and the relative-error lemmas built on them.
 - Lean core `Array.binSearch` (Init/Data/Array/BinSearch.lean): binary search with no theorems about it in v4.35.0, so Core's `Series.lowerBoundFrom` is its own.
+- Lean core `Nat.toDigits` and `Nat.digitChar` (Init/Data/Repr.lean): most-significant-first digits of a Nat, with only membership and base-case lemmas in v4.35.0 (nothing on length or value). inkproof-axis keeps its own fixed-width `lsDigits` with those proofs.
 - Batteries: extra data structures and lemmas (`BinaryHeap`, `RBMap`, list and array lemmas). https://github.com/leanprover-community/batteries. Known to work under Lasm only if a build is confirmed; unknown.
 - Mathlib: real analysis, order, algebra and lattice theory for proofs. https://github.com/leanprover-community/mathlib4. Not used (human's decision 2026-11-05); Core reported on it under Lasm, see inkproof-core#2. Proof modules only, never linked into a browser build (CLAUDE.md).
 
