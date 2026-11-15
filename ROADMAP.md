@@ -141,7 +141,9 @@ Decided by the human on 2026-11-15 (inkproof-coordination#87): `inkproof-scene` 
 | inkproof-scene | SCENE-6 | [inkproof-scene#4](https://github.com/paulbutcher/inkproof-scene/issues/4), after #2 |
 | inkproof-scene | SCENE-2, PROOF-4, PROOF-7 | [inkproof-scene#5](https://github.com/paulbutcher/inkproof-scene/issues/5), after #2 |
 
-After #2, the other three are independent. Gpu and Export (Milestone 5) follow the milestone's acceptance.
+After #2, the other three are independent.
+
+Accepted by the coordinator on 2026-11-15 (inkproof-coordination#91): Scene `v0.4.0` (SCENE-1 to SCENE-6, PROOF-4, PROOF-7, PROOF-8, PROOF-16) on `main`, all briefs verified. Line theorems hold for bare (half-width zero) lines; the obstacle for thick lines is in Scene's DESIGN.md. Gpu and Export (Milestone 5) come next.
 
 ## Later milestones
 
