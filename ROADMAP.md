@@ -156,3 +156,17 @@ An outline only; each milestone is planned in detail when the one before it is a
 | 4 | Inkproof.Scene (SCENE-1 to SCENE-6, PROOF-4, PROOF-7, PROOF-8, PROOF-16), after the raster-model decision. |
 | 5 | Inkproof.Gpu (GPU-1 to GPU-7, PROOF-6, PROOF-11, PROOF-14, PROOF-15) and Inkproof.Export (EXPORT-1, EXPORT-2). |
 | 6 | Inkproof.Web (WEB-1 to WEB-7), performance, accessibility, the flagship demo and 1.0 acceptance (ACC-1 to ACC-10). |
+
+## Milestone 5: Gpu and Export
+
+Both libraries depend only on Scene (ARCH-1), so they proceed in parallel. The human created both repositories at autonomy level 3 (2026-11-15, inkproof-coordination#93).
+
+| Library | In scope | Brief |
+| --- | --- | --- |
+| inkproof-gpu | GPU-2, GPU-5, GPU-6, GPU-7, PROOF-14 | [inkproof-gpu#2](https://github.com/paulbutcher/inkproof-gpu/issues/2) |
+| inkproof-gpu | GPU-1, GPU-3, PROOF-11 | [inkproof-gpu#3](https://github.com/paulbutcher/inkproof-gpu/issues/3) |
+| inkproof-gpu | GPU-4, PROOF-6, PROOF-15 | [inkproof-gpu#4](https://github.com/paulbutcher/inkproof-gpu/issues/4) |
+| inkproof-export | EXPORT-1 | [inkproof-export#2](https://github.com/paulbutcher/inkproof-export/issues/2) |
+| inkproof-export | EXPORT-2 | [inkproof-export#3](https://github.com/paulbutcher/inkproof-export/issues/3) |
+
+Gpu#3 uses the command type from Gpu#2. Scene `v0.4.1` dropped its unused Axis requirement (inkproof-scene#10); inkproof-float#15 (general Rat lemmas moved down from Scene) waits on its `v0.5.0` changelog entry, after which Scene switches to it. Web (Milestone 6) follows.
