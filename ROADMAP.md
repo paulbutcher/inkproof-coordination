@@ -170,3 +170,9 @@ Both libraries depend only on Scene (ARCH-1), so they proceed in parallel. The h
 | inkproof-export | EXPORT-2 | [inkproof-export#3](https://github.com/paulbutcher/inkproof-export/issues/3) |
 
 Gpu#3 uses the command type from Gpu#2. Scene `v0.4.1` dropped its unused Axis requirement (inkproof-scene#10); inkproof-float#15 (general Rat lemmas moved down from Scene) waits on its `v0.5.0` changelog entry, after which Scene switches to it. Web (Milestone 6) follows.
+
+Accepted by the coordinator on 2026-11-15 (inkproof-coordination#100): Gpu `v0.2.0` (GPU-1 to GPU-7, PROOF-6, PROOF-11, PROOF-14, PROOF-15) and Export `v0.1.0` (EXPORT-1, EXPORT-2) on `main`, all briefs verified, with no new axiom and no sorry.
+
+## Review follow-ups 5
+
+Adopted from the Milestone 5 reviews (inkproof-coordination#101, #102): Scene publishes the paint order (inkproof-scene#14), then Gpu and Export use it (inkproof-gpu#8, inkproof-export#5). Core takes the locale-free decimal formatting from Axis (inkproof-core#56), then Axis and Export switch to it (inkproof-axis#11, inkproof-export#6). Web (Milestone 6) follows.
