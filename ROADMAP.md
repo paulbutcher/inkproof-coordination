@@ -126,6 +126,10 @@ Decided by the human on 2026-11-15 (inkproof-coordination#75): create `inkproof-
 
 The first brief in each library also wires its dependencies (Scale, Float, Tools at release tags; api-lock, test driver and axiom check from inkproof-tools).
 
+## Float format lemmas, Axis and Viewport, Review follow-ups 3
+
+Accepted by the coordinator on 2026-11-15 (inkproof-coordination#81, #82, #86): Float `v0.4.0` (rounding-unit lemmas moved down from Scale), Scale `v0.6.1`, Axis `v0.4.0` (AXIS-1 to AXIS-3) and Viewport `v0.2.0` (VIEW-1 to VIEW-4), all on `main` with no new axiom and no sorry. Reviews made no open recommendations. Milestone 4 (Scene) waits on the human: it needs a repository and agent, and the raster-model decision (inkproof-coordination#87).
+
 ## Later milestones
 
 An outline only; each milestone is planned in detail when the one before it is accepted, and most need agents that do not exist yet.
