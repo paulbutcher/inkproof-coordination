@@ -109,7 +109,7 @@ Order:
 2. inkproof-tools: move InkproofTools and the shared axiom check from Core (inkproof-tools#2). Then Float wires api-lock, the test driver and CODEOWNERS (inkproof-float#6; no Float release can be computed before it), and Core (inkproof-core#52), Scale (inkproof-scale#39) and the consumer (inkproof-consumer-metrics#13) switch to it.
 3. Core (inkproof-core#51) waits on the Float move release; Scale (inkproof-scale#38) waits on the lemmas release; the consumer (inkproof-consumer-metrics#12) follows both.
 
-Milestone 3 (Axis and Viewport) waits for it, since both depend on the float model's final shape.
+Accepted by the coordinator on 2026-11-14: all twelve briefs across inkproof-float, inkproof-tools, Core, Scale and the consumer are verified on `main` (Float `v0.3.0`, Tools `v0.2.1`, Core `v0.7.0`, Scale `v0.6.0`, consumer `v0.1.1`), with no new axiom and no sorry; `float_rounding_model` and `float32_rounding_model` remain axioms with the obstacle recorded in Float's `DESIGN.md` (inkproof-coordination#73). Milestone 3 (Axis and Viewport) is drafted next.
 
 ## Later milestones
 
