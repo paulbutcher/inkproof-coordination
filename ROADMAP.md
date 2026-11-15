@@ -176,3 +176,9 @@ Accepted by the coordinator on 2026-11-15 (inkproof-coordination#100): Gpu `v0.2
 ## Review follow-ups 5
 
 Adopted from the Milestone 5 reviews (inkproof-coordination#101, #102): Scene publishes the paint order (inkproof-scene#14), then Gpu and Export use it (inkproof-gpu#8, inkproof-export#5). Core takes the locale-free decimal formatting from Axis (inkproof-core#56), then Axis and Export switch to it (inkproof-axis#11, inkproof-export#6). Web (Milestone 6) follows.
+
+Accepted by the coordinator on 2026-11-15 (inkproof-coordination#104): the Review follow-ups 5 work, with Scene `v0.6.0`, Core `v0.8.1`, Axis `v0.5.0`, Gpu `v0.3.0` and Export `v0.3.0`.
+
+## Milestone 6: Web
+
+Waits on the human to create `inkproof-web` and its agent (inkproof-coordination#105). Once it exists, the WEB-1 to WEB-7 briefs are filed on it; the demo and 1.0 acceptance (ACC-1 to ACC-10) follow.
