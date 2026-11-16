@@ -192,7 +192,7 @@ Decided by the human (2026-11-16, inkproof-coordination#123): the flagship demo 
 | Library | In scope | Brief |
 | --- | --- | --- |
 | inkproof-core | PERF-4 | [inkproof-core#62](https://github.com/paulbutcher/inkproof-core/issues/62) |
-| inkproof-web | A11Y-1, A11Y-2 | [inkproof-web#13](https://github.com/paulbutcher/inkproof-web/issues/13) |
+| inkproof-web | A11Y-1, A11Y-2; Gpu v0.5.0 scissor command | [inkproof-web#13](https://github.com/paulbutcher/inkproof-web/issues/13); [#16](https://github.com/paulbutcher/inkproof-web/issues/16) (requested by the demo; blocks the chart drawing in inkproof-demo#2) |
 | inkproof-gpu | GPU-1 (public tessellator, requested by the demo) | [inkproof-gpu#12](https://github.com/paulbutcher/inkproof-gpu/issues/12); blocks inkproof-demo#2 |
 | inkproof-scene | A11Y-3 | [inkproof-scene#16](https://github.com/paulbutcher/inkproof-scene/issues/16) |
 | inkproof-demo | ACC-1 to ACC-10, PERF-1 to PERF-3, PERF-5 | [inkproof-demo#2](https://github.com/paulbutcher/inkproof-demo/issues/2) (chart, PERF-1 to 3), [#3](https://github.com/paulbutcher/inkproof-demo/issues/3) (ACC-3, ACC-6), [#4](https://github.com/paulbutcher/inkproof-demo/issues/4) (ACC-7), [#5](https://github.com/paulbutcher/inkproof-demo/issues/5) (ACC-8, ACC-10; waits for web#13 and scene#16), [#6](https://github.com/paulbutcher/inkproof-demo/issues/6) (ACC-9), [#7](https://github.com/paulbutcher/inkproof-demo/issues/7) (PERF-5; waits for core#62) |
