@@ -182,3 +182,5 @@ Accepted by the coordinator on 2026-11-15 (inkproof-coordination#104): the Revie
 ## Milestone 6: Web
 
 `inkproof-web` exists at autonomy level 3. Briefs: inkproof-web#2 (WEB-2 hosting), #3 (WEB-4 text measurement, after #2), #4 (WEB-3 DPR, resize, context loss, shared context), #5 (WEB-1 custom element), #6 (WEB-5 off-thread tiles), #7 (WEB-6 shim ledger and WEB-7 logging). The demo and 1.0 acceptance (ACC-1 to ACC-10) follow.
+
+Accepted by the coordinator on 2026-11-15 (inkproof-coordination#122): the Web work, with Web `v0.1.0` and `v0.2.0`. The reviews' recommendations are adopted or with the human: Core takes `foldTilesM` (inkproof-coordination#127, inkproof-core#60), then Web switches to it. The demo repository awaits the human's decision (inkproof-coordination#123).
