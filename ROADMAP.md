@@ -10,11 +10,11 @@ Requirement IDs refer to [REQUIREMENTS.md](REQUIREMENTS.md). Decisions waiting f
 | inkproof-scale | Milestone 1 brief done: `v0.1.0` released and verified (inkproof-scale#2); `v0.1.1` released by the coordinator (2026-11-10): inkproof-scale#6's README fix, and `CHANGELOG.md` now has the `0.1.0` and `0.1.1` entries; the consumer upgrades and verifies | Nothing |
 | inkproof-consumer-metrics | Milestone 1 brief done and verified (inkproof-consumer-metrics#1, #4) | Nothing |
 
-Other open requests, all from the consumer: [inkproof-scale#6](https://github.com/paulbutcher/inkproof-scale/issues/6) (README `require` line and release rows; documentation only, wanted before Milestone 1 closes), answered by [inkproof-scale#7](https://github.com/paulbutcher/inkproof-scale/pull/7), released in Scale `v0.1.1` (the consumer verifies and closes); [inkproof-core#18](https://github.com/paulbutcher/inkproof-core/issues/18) (gap predicate that sees readings) and [inkproof-core#19](https://github.com/paulbutcher/inkproof-core/issues/19) (segmented query over overlapping segments only), planned for Milestone 2 both merged and released in Core `v0.2.0`; the consumer upgrades and verifies.
+Other open requests, all from the consumer: [inkproof-scale#6](http://localhost:3000/tentenths/inkproof-scale/issues/6) (README `require` line and release rows; documentation only, wanted before Milestone 1 closes), answered by [inkproof-scale#7](http://localhost:3000/tentenths/inkproof-scale/pulls/7), released in Scale `v0.1.1` (the consumer verifies and closes); [inkproof-core#18](http://localhost:3000/tentenths/inkproof-core/issues/18) (gap predicate that sees readings) and [inkproof-core#19](http://localhost:3000/tentenths/inkproof-core/issues/19) (segmented query over overlapping segments only), planned for Milestone 2 both merged and released in Core `v0.2.0`; the consumer upgrades and verifies.
 
 ## Decisions
 
-- No library uses Mathlib for now; revisit if a proof needs it (2026-11-05, on [inkproof-core#2](https://github.com/paulbutcher/inkproof-core/issues/2)).
+- No library uses Mathlib for now; revisit if a proof needs it (2026-11-05, on [inkproof-core#2](http://localhost:3000/tentenths/inkproof-core/issues/2)).
 - Every repository is licensed under Apache 2.0 (2026-11-05).
 - FP-2's axiom excludes `-0.0` as well as NaN, matching inkproof-core#14 (2026-11-05).
 - Every public operation gets a theorem stating what it computes, not only its laws (PROC-6, CLAUDE.md); the Core and Scale briefs are amended to match (2026-11-05).
@@ -28,9 +28,9 @@ Establish the first two layers and prove a consumer can use them from released v
 
 | Library | In scope | Brief |
 | --- | --- | --- |
-| Inkproof.Core | Setup; CORE-1, CORE-2, CORE-3, CORE-5, CORE-6, FP-1, FP-2, PROOF-1, PROOF-2, PROOF-3 | [inkproof-core#2](https://github.com/paulbutcher/inkproof-core/issues/2) |
-| Inkproof.Scale | Linear scales only (part of SCALE-1), SCALE-2, PROOF-5 | [inkproof-scale#2](https://github.com/paulbutcher/inkproof-scale/issues/2) |
-| inkproof-consumer-metrics | Headless server-metrics consumer of both (VAL-3, VAL-2), native only | [inkproof-consumer-metrics#1](https://github.com/paulbutcher/inkproof-consumer-metrics/issues/1) |
+| Inkproof.Core | Setup; CORE-1, CORE-2, CORE-3, CORE-5, CORE-6, FP-1, FP-2, PROOF-1, PROOF-2, PROOF-3 | [inkproof-core#2](http://localhost:3000/tentenths/inkproof-core/issues/2) |
+| Inkproof.Scale | Linear scales only (part of SCALE-1), SCALE-2, PROOF-5 | [inkproof-scale#2](http://localhost:3000/tentenths/inkproof-scale/issues/2) |
+| inkproof-consumer-metrics | Headless server-metrics consumer of both (VAL-3, VAL-2), native only | [inkproof-consumer-metrics#1](http://localhost:3000/tentenths/inkproof-consumer-metrics/issues/1) |
 
 Everything else is out of scope, including CORE-4, CORE-7, CORE-8, FP-3, FP-4, the other scale kinds, SCALE-3 to SCALE-6, Node builds (PLAT-8) and calendar time.
 
@@ -67,9 +67,9 @@ Complete the two lower libraries before Axis and Viewport build on them.
 
 | Library | In scope | Brief |
 | --- | --- | --- |
-| inkproof-core | CORE-4, CORE-7, CORE-8, FP-4 | [inkproof-core#34](https://github.com/paulbutcher/inkproof-core/issues/34) |
-| inkproof-scale | SCALE-1 (log, elapsed-duration, categorical), SCALE-4, SCALE-6 | [inkproof-scale#16](https://github.com/paulbutcher/inkproof-scale/issues/16) |
-| inkproof-scale | SCALE-3, FP-3 | [inkproof-scale#17](https://github.com/paulbutcher/inkproof-scale/issues/17) |
+| inkproof-core | CORE-4, CORE-7, CORE-8, FP-4 | [inkproof-core#34](http://localhost:3000/tentenths/inkproof-core/issues/34) |
+| inkproof-scale | SCALE-1 (log, elapsed-duration, categorical), SCALE-4, SCALE-6 | [inkproof-scale#16](http://localhost:3000/tentenths/inkproof-scale/issues/16) |
+| inkproof-scale | SCALE-3, FP-3 | [inkproof-scale#17](http://localhost:3000/tentenths/inkproof-scale/issues/17) |
 
 FP-3 decided by the human (2026-11-12, inkproof-coordination#40): option 1, a real-number model with an explicit error bound under one rounding axiom in the style of FP-2, limited at first to the linear and rebased maps (SCALE-3). Deferred to a later milestone: SCALE-5 (calendar time), PLAT-8 (Node builds), VAL-6 (differential builds) and more simulated consumers (VAL-3), which need agents that do not exist yet.
 
@@ -85,13 +85,13 @@ Remove duplicated code between libraries (REUSE-1, REUSE-2), decided by the huma
 
 | Library | Brief | Order |
 | --- | --- | --- |
-| inkproof-core | [#39](https://github.com/paulbutcher/inkproof-core/issues/39) Float error lemmas, `ratAbs` replaced by `Rat.abs` | after inkproof-core#38 |
-| inkproof-core | [#40](https://github.com/paulbutcher/inkproof-core/issues/40) development-only test harness library and Plausible assessment | parallel |
-| inkproof-core | [#41](https://github.com/paulbutcher/inkproof-core/issues/41) `lowerBoundFrom` through `lowerBoundFromBy` | parallel |
-| inkproof-scale | [#28](https://github.com/paulbutcher/inkproof-scale/issues/28) use Lean core's natCast lemmas | any time |
-| inkproof-scale | [#29](https://github.com/paulbutcher/inkproof-scale/issues/29) use Core's error lemmas | blocked on inkproof-core#39 release |
-| inkproof-scale | [#30](https://github.com/paulbutcher/inkproof-scale/issues/30) use Core's harness | blocked on inkproof-core#40 release |
-| inkproof-consumer-metrics | [#9](https://github.com/paulbutcher/inkproof-consumer-metrics/issues/9) use Core's harness | blocked on inkproof-core#40 release |
+| inkproof-core | [#39](http://localhost:3000/tentenths/inkproof-core/issues/39) Float error lemmas, `ratAbs` replaced by `Rat.abs` | after inkproof-core#38 |
+| inkproof-core | [#40](http://localhost:3000/tentenths/inkproof-core/issues/40) development-only test harness library and Plausible assessment | parallel |
+| inkproof-core | [#41](http://localhost:3000/tentenths/inkproof-core/issues/41) `lowerBoundFrom` through `lowerBoundFromBy` | parallel |
+| inkproof-scale | [#28](http://localhost:3000/tentenths/inkproof-scale/issues/28) use Lean core's natCast lemmas | any time |
+| inkproof-scale | [#29](http://localhost:3000/tentenths/inkproof-scale/issues/29) use Core's error lemmas | blocked on inkproof-core#39 release |
+| inkproof-scale | [#30](http://localhost:3000/tentenths/inkproof-scale/issues/30) use Core's harness | blocked on inkproof-core#40 release |
+| inkproof-consumer-metrics | [#9](http://localhost:3000/tentenths/inkproof-consumer-metrics/issues/9) use Core's harness | blocked on inkproof-core#40 release |
 
 The human wants Plausible adopted unless the assessment in inkproof-core#40 finds significant downsides; if it does, it comes back to them. inkproof-coordination#47, #48 and #50 remain with the human.
 
@@ -117,12 +117,12 @@ Decided by the human on 2026-11-15 (inkproof-coordination#75): create `inkproof-
 
 | Library | In scope | Brief |
 | --- | --- | --- |
-| inkproof-axis | AXIS-1, PROOF-12 (ticks) | [inkproof-axis#2](https://github.com/paulbutcher/inkproof-axis/issues/2) |
-| inkproof-axis | AXIS-2, PROOF-12 (labels) | [inkproof-axis#3](https://github.com/paulbutcher/inkproof-axis/issues/3), after #2 |
-| inkproof-axis | AXIS-3, PROOF-13 | [inkproof-axis#4](https://github.com/paulbutcher/inkproof-axis/issues/4), after #2 |
-| inkproof-viewport | VIEW-1, VIEW-2, PROOF-9 | [inkproof-viewport#2](https://github.com/paulbutcher/inkproof-viewport/issues/2) |
-| inkproof-viewport | VIEW-3, PROOF-10 | [inkproof-viewport#3](https://github.com/paulbutcher/inkproof-viewport/issues/3), after #2 |
-| inkproof-viewport | VIEW-4 | [inkproof-viewport#4](https://github.com/paulbutcher/inkproof-viewport/issues/4), after #2 |
+| inkproof-axis | AXIS-1, PROOF-12 (ticks) | [inkproof-axis#2](http://localhost:3000/tentenths/inkproof-axis/issues/2) |
+| inkproof-axis | AXIS-2, PROOF-12 (labels) | [inkproof-axis#3](http://localhost:3000/tentenths/inkproof-axis/issues/3), after #2 |
+| inkproof-axis | AXIS-3, PROOF-13 | [inkproof-axis#4](http://localhost:3000/tentenths/inkproof-axis/issues/4), after #2 |
+| inkproof-viewport | VIEW-1, VIEW-2, PROOF-9 | [inkproof-viewport#2](http://localhost:3000/tentenths/inkproof-viewport/issues/2) |
+| inkproof-viewport | VIEW-3, PROOF-10 | [inkproof-viewport#3](http://localhost:3000/tentenths/inkproof-viewport/issues/3), after #2 |
+| inkproof-viewport | VIEW-4 | [inkproof-viewport#4](http://localhost:3000/tentenths/inkproof-viewport/issues/4), after #2 |
 
 The first brief in each library also wires its dependencies (Scale, Float, Tools at release tags; api-lock, test driver and axiom check from inkproof-tools).
 
@@ -136,10 +136,10 @@ Decided by the human on 2026-11-15 (inkproof-coordination#87): `inkproof-scene` 
 
 | Library | In scope | Brief |
 | --- | --- | --- |
-| inkproof-scene | Setup, SCENE-1, SCENE-5 | [inkproof-scene#2](https://github.com/paulbutcher/inkproof-scene/issues/2) |
-| inkproof-scene | SCENE-3, SCENE-4, PROOF-8, PROOF-16 | [inkproof-scene#3](https://github.com/paulbutcher/inkproof-scene/issues/3), after #2 |
-| inkproof-scene | SCENE-6 | [inkproof-scene#4](https://github.com/paulbutcher/inkproof-scene/issues/4), after #2 |
-| inkproof-scene | SCENE-2, PROOF-4, PROOF-7 | [inkproof-scene#5](https://github.com/paulbutcher/inkproof-scene/issues/5), after #2 |
+| inkproof-scene | Setup, SCENE-1, SCENE-5 | [inkproof-scene#2](http://localhost:3000/tentenths/inkproof-scene/issues/2) |
+| inkproof-scene | SCENE-3, SCENE-4, PROOF-8, PROOF-16 | [inkproof-scene#3](http://localhost:3000/tentenths/inkproof-scene/issues/3), after #2 |
+| inkproof-scene | SCENE-6 | [inkproof-scene#4](http://localhost:3000/tentenths/inkproof-scene/issues/4), after #2 |
+| inkproof-scene | SCENE-2, PROOF-4, PROOF-7 | [inkproof-scene#5](http://localhost:3000/tentenths/inkproof-scene/issues/5), after #2 |
 
 After #2, the other three are independent.
 
@@ -163,11 +163,11 @@ Both libraries depend only on Scene (ARCH-1), so they proceed in parallel. The h
 
 | Library | In scope | Brief |
 | --- | --- | --- |
-| inkproof-gpu | GPU-2, GPU-5, GPU-6, GPU-7, PROOF-14 | [inkproof-gpu#2](https://github.com/paulbutcher/inkproof-gpu/issues/2) |
-| inkproof-gpu | GPU-1, GPU-3, PROOF-11 | [inkproof-gpu#3](https://github.com/paulbutcher/inkproof-gpu/issues/3) |
-| inkproof-gpu | GPU-4, PROOF-6, PROOF-15 | [inkproof-gpu#4](https://github.com/paulbutcher/inkproof-gpu/issues/4) |
-| inkproof-export | EXPORT-1 | [inkproof-export#2](https://github.com/paulbutcher/inkproof-export/issues/2) |
-| inkproof-export | EXPORT-2 | [inkproof-export#3](https://github.com/paulbutcher/inkproof-export/issues/3) |
+| inkproof-gpu | GPU-2, GPU-5, GPU-6, GPU-7, PROOF-14 | [inkproof-gpu#2](http://localhost:3000/tentenths/inkproof-gpu/issues/2) |
+| inkproof-gpu | GPU-1, GPU-3, PROOF-11 | [inkproof-gpu#3](http://localhost:3000/tentenths/inkproof-gpu/issues/3) |
+| inkproof-gpu | GPU-4, PROOF-6, PROOF-15 | [inkproof-gpu#4](http://localhost:3000/tentenths/inkproof-gpu/issues/4) |
+| inkproof-export | EXPORT-1 | [inkproof-export#2](http://localhost:3000/tentenths/inkproof-export/issues/2) |
+| inkproof-export | EXPORT-2 | [inkproof-export#3](http://localhost:3000/tentenths/inkproof-export/issues/3) |
 
 Gpu#3 uses the command type from Gpu#2. Scene `v0.4.1` dropped its unused Axis requirement (inkproof-scene#10); inkproof-float#15 (general Rat lemmas moved down from Scene) waits on its `v0.5.0` changelog entry, after which Scene switches to it. Web (Milestone 6) follows.
 
@@ -191,8 +191,8 @@ Decided by the human (2026-11-16, inkproof-coordination#123): the flagship demo 
 
 | Library | In scope | Brief |
 | --- | --- | --- |
-| inkproof-core | PERF-4 | [inkproof-core#62](https://github.com/paulbutcher/inkproof-core/issues/62) |
-| inkproof-web | A11Y-1, A11Y-2; Gpu v0.5.0 scissor command | [inkproof-web#13](https://github.com/paulbutcher/inkproof-web/issues/13); [#16](https://github.com/paulbutcher/inkproof-web/issues/16) (requested by the demo; blocks the chart drawing in inkproof-demo#2) |
-| inkproof-gpu | GPU-1 (public tessellator, requested by the demo) | [inkproof-gpu#12](https://github.com/paulbutcher/inkproof-gpu/issues/12); blocks inkproof-demo#2 |
-| inkproof-scene | A11Y-3 | [inkproof-scene#16](https://github.com/paulbutcher/inkproof-scene/issues/16) |
-| inkproof-demo | ACC-1 to ACC-10, PERF-1 to PERF-3, PERF-5 | [inkproof-demo#2](https://github.com/paulbutcher/inkproof-demo/issues/2) (chart, PERF-1 to 3), [#3](https://github.com/paulbutcher/inkproof-demo/issues/3) (ACC-3, ACC-6), [#4](https://github.com/paulbutcher/inkproof-demo/issues/4) (ACC-7), [#5](https://github.com/paulbutcher/inkproof-demo/issues/5) (ACC-8, ACC-10; waits for web#13 and scene#16), [#6](https://github.com/paulbutcher/inkproof-demo/issues/6) (ACC-9), [#7](https://github.com/paulbutcher/inkproof-demo/issues/7) (PERF-5; waits for core#62) |
+| inkproof-core | PERF-4 | [inkproof-core#62](http://localhost:3000/tentenths/inkproof-core/issues/62) |
+| inkproof-web | A11Y-1, A11Y-2; Gpu v0.5.0 scissor command | [inkproof-web#13](http://localhost:3000/tentenths/inkproof-web/issues/13); [#16](http://localhost:3000/tentenths/inkproof-web/issues/16) (requested by the demo; blocks the chart drawing in inkproof-demo#2) |
+| inkproof-gpu | GPU-1 (public tessellator, requested by the demo) | [inkproof-gpu#12](http://localhost:3000/tentenths/inkproof-gpu/issues/12); blocks inkproof-demo#2 |
+| inkproof-scene | A11Y-3 | [inkproof-scene#16](http://localhost:3000/tentenths/inkproof-scene/issues/16) |
+| inkproof-demo | ACC-1 to ACC-10, PERF-1 to PERF-3, PERF-5 | [inkproof-demo#2](http://localhost:3000/tentenths/inkproof-demo/issues/2) (chart, PERF-1 to 3), [#3](http://localhost:3000/tentenths/inkproof-demo/issues/3) (ACC-3, ACC-6), [#4](http://localhost:3000/tentenths/inkproof-demo/issues/4) (ACC-7), [#5](http://localhost:3000/tentenths/inkproof-demo/issues/5) (ACC-8, ACC-10; waits for web#13 and scene#16), [#6](http://localhost:3000/tentenths/inkproof-demo/issues/6) (ACC-9), [#7](http://localhost:3000/tentenths/inkproof-demo/issues/7) (PERF-5; waits for core#62) |
