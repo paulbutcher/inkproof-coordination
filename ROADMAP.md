@@ -187,11 +187,11 @@ Accepted by the coordinator on 2026-11-15 (inkproof-coordination#122): the Web w
 
 ## Milestone 7: demo, performance and accessibility
 
-Decided by the human (2026-11-16, inkproof-coordination#123): the flagship demo (ACC-1 to ACC-10) lives in a new repository, `inkproof-demo`, depending on the libraries by GitHub URL and release tag. The repository and its agent do not exist yet; the demo briefs are filed once they do.
+Decided by the human (2026-11-16, inkproof-coordination#123): the flagship demo (ACC-1 to ACC-10) lives in a new repository, `inkproof-demo`, depending on the libraries by GitHub URL and release tag. The repository and its agent now exist at autonomy level 3.
 
 | Library | In scope | Brief |
 | --- | --- | --- |
 | inkproof-core | PERF-4 | [inkproof-core#62](https://github.com/paulbutcher/inkproof-core/issues/62) |
 | inkproof-web | A11Y-1, A11Y-2 | [inkproof-web#13](https://github.com/paulbutcher/inkproof-web/issues/13) |
 | inkproof-scene | A11Y-3 | [inkproof-scene#16](https://github.com/paulbutcher/inkproof-scene/issues/16) |
-| inkproof-demo | ACC-1 to ACC-10, PERF-1 to PERF-3, PERF-5 | Not yet filed: waits for the repository |
+| inkproof-demo | ACC-1 to ACC-10, PERF-1 to PERF-3, PERF-5 | [inkproof-demo#2](https://github.com/paulbutcher/inkproof-demo/issues/2) (chart, PERF-1 to 3), [#3](https://github.com/paulbutcher/inkproof-demo/issues/3) (ACC-3, ACC-6), [#4](https://github.com/paulbutcher/inkproof-demo/issues/4) (ACC-7), [#5](https://github.com/paulbutcher/inkproof-demo/issues/5) (ACC-8, ACC-10; waits for web#13 and scene#16), [#6](https://github.com/paulbutcher/inkproof-demo/issues/6) (ACC-9), [#7](https://github.com/paulbutcher/inkproof-demo/issues/7) (PERF-5; waits for core#62) |
