@@ -184,3 +184,14 @@ Accepted by the coordinator on 2026-11-15 (inkproof-coordination#104): the Revie
 `inkproof-web` exists at autonomy level 3. Briefs: inkproof-web#2 (WEB-2 hosting), #3 (WEB-4 text measurement, after #2), #4 (WEB-3 DPR, resize, context loss, shared context), #5 (WEB-1 custom element), #6 (WEB-5 off-thread tiles), #7 (WEB-6 shim ledger and WEB-7 logging). The demo and 1.0 acceptance (ACC-1 to ACC-10) follow.
 
 Accepted by the coordinator on 2026-11-15 (inkproof-coordination#122): the Web work, with Web `v0.1.0` and `v0.2.0`. The reviews' recommendations are adopted or with the human: Core takes `foldTilesM` (inkproof-coordination#127, inkproof-core#60), then Web switches to it. The demo repository awaits the human's decision (inkproof-coordination#123).
+
+## Milestone 7: demo, performance and accessibility
+
+Decided by the human (2026-11-16, inkproof-coordination#123): the flagship demo (ACC-1 to ACC-10) lives in a new repository, `inkproof-demo`, depending on the libraries by GitHub URL and release tag. The repository and its agent do not exist yet; the demo briefs are filed once they do.
+
+| Library | In scope | Brief |
+| --- | --- | --- |
+| inkproof-core | PERF-4 | [inkproof-core#62](https://github.com/paulbutcher/inkproof-core/issues/62) |
+| inkproof-web | A11Y-1, A11Y-2 | [inkproof-web#13](https://github.com/paulbutcher/inkproof-web/issues/13) |
+| inkproof-scene | A11Y-3 | [inkproof-scene#16](https://github.com/paulbutcher/inkproof-scene/issues/16) |
+| inkproof-demo | ACC-1 to ACC-10, PERF-1 to PERF-3, PERF-5 | Not yet filed: waits for the repository |
