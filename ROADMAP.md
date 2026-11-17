@@ -191,7 +191,7 @@ Decided by the human (2026-11-16, inkproof-coordination#123): the flagship demo 
 
 | Library | In scope | Brief |
 | --- | --- | --- |
-| inkproof-core | PERF-4 | [inkproof-core#62](http://localhost:3000/tentenths/inkproof-core/issues/62) |
+| inkproof-core | PERF-4; Pyramid.queryTiledM (requested by the demo) | [inkproof-core#62](http://localhost:3000/tentenths/inkproof-core/issues/62); [#65](http://localhost:3000/tentenths/inkproof-core/issues/65) (blocks the tile loader in inkproof-demo#2) |
 | inkproof-web | A11Y-1, A11Y-2; Gpu v0.5.0 scissor command | [inkproof-web#13](http://localhost:3000/tentenths/inkproof-web/issues/13); [#16](http://localhost:3000/tentenths/inkproof-web/issues/16) (requested by the demo; blocks the chart drawing in inkproof-demo#2) |
 | inkproof-gpu | GPU-1 (public tessellator, requested by the demo) | [inkproof-gpu#12](http://localhost:3000/tentenths/inkproof-gpu/issues/12); blocks inkproof-demo#2 |
 | inkproof-scene | A11Y-3 | [inkproof-scene#16](http://localhost:3000/tentenths/inkproof-scene/issues/16) |
