@@ -23,6 +23,7 @@ Other open requests, all from the consumer: [inkproof-scale#6](http://localhost:
 - One Lasm version everywhere, the latest release, moved in every repository together (2026-11-17, [#139](http://localhost:3000/tentenths/inkproof-coordination/issues/139)).
 - CI checks performance as a regression against a baseline (PERF-5); the human measures PERF-1, PERF-3 and ACC-1 on devices (2026-11-17, [inkproof-demo#2](http://localhost:3000/tentenths/inkproof-demo/issues/2)).
 - A Demo MVP comes before the rest of 1.0 (2026-11-17, [#145](http://localhost:3000/tentenths/inkproof-coordination/issues/145)); the 1.0 acceptance is unchanged and what the MVP leaves out is deferred.
+- Web's bounded LRU map stays in Web; once the demo is done it is to be extracted into a separate, non-inkproof library (2026-11-17, [#147](http://localhost:3000/tentenths/inkproof-coordination/issues/147), [#149](http://localhost:3000/tentenths/inkproof-coordination/issues/149)). No inkproof-containers library.
 - The coordinator merges its own pull requests that touch only `ROADMAP.md` and `NEEDS-HUMAN.md`; `CODEOWNERS` keeps requirements, `CLAUDE.md`, the licence and `.github/` waiting for the human (2026-11-06, inkproof-coordination#10).
 
 ## Milestone 1: proved aggregation and linear scales
