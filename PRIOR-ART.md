@@ -25,4 +25,5 @@ Existing libraries that could serve Inkproof. Each line: what it offers, URL, an
 - hex: verified computational algebra. https://reservoir.lean-lang.org. Lasm unknown; check for exact linear algebra if Scale needs it.
 - ryu: floating point to decimal string. https://reservoir.lean-lang.org. Failed to build on v4.36.0-rc2; Lasm unknown. Relevant to number formatting.
 - sampcert, MathFin: differential privacy and financial mathematics. https://reservoir.lean-lang.org. Not relevant.
+- Bounded LRU map or cache: none found in Lean core, Std, Batteries, Mathlib (Loogle for "LRU" returns nothing; Batteries has `RBMap`, `BinaryHeap`, no cache), the human's repositories, or Reservoir's search page (checked 2026-11-17). Web's private `Lru` is the only one; it stays in Web and is to be extracted as a non-inkproof library later (#149).
 - Plotting, charts, SVG, scales and time series: none found.
