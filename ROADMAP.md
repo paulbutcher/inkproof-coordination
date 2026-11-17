@@ -20,6 +20,8 @@ Other open requests, all from the consumer: [inkproof-scale#6](http://localhost:
 - Every public operation gets a theorem stating what it computes, not only its laws (PROC-6, CLAUDE.md); the Core and Scale briefs are amended to match (2026-11-05).
 - Libraries generate `API.lock` with Core's `api-lock` executable, run from their own `scripts/api-lock.sh` once they depend on a Core release; none writes its own (2026-11-05, same issue; usage in Core's `DESIGN.md`).
 - Core was at autonomy level 3 (2026-11-07), then level 1 (2026-11-09), and Core and Scale are at level 3 again (2026-11-10, inkproof-core#33, inkproof-scale#14): the coordinator reviews `API.lock` changes and releases. The consumer is at level 3 too (2026-11-10, inkproof-consumer-metrics#8).
+- One Lasm version everywhere, the latest release, moved in every repository together (2026-11-17, [#139](http://localhost:3000/tentenths/inkproof-coordination/issues/139)).
+- CI checks performance as a regression against a baseline (PERF-5); the human measures PERF-1, PERF-3 and ACC-1 on devices (2026-11-17, [inkproof-demo#2](http://localhost:3000/tentenths/inkproof-demo/issues/2)).
 - The coordinator merges its own pull requests that touch only `ROADMAP.md` and `NEEDS-HUMAN.md`; `CODEOWNERS` keeps requirements, `CLAUDE.md`, the licence and `.github/` waiting for the human (2026-11-06, inkproof-coordination#10).
 
 ## Milestone 1: proved aggregation and linear scales
