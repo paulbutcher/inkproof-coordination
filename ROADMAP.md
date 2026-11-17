@@ -22,6 +22,7 @@ Other open requests, all from the consumer: [inkproof-scale#6](http://localhost:
 - Core was at autonomy level 3 (2026-11-07), then level 1 (2026-11-09), and Core and Scale are at level 3 again (2026-11-10, inkproof-core#33, inkproof-scale#14): the coordinator reviews `API.lock` changes and releases. The consumer is at level 3 too (2026-11-10, inkproof-consumer-metrics#8).
 - One Lasm version everywhere, the latest release, moved in every repository together (2026-11-17, [#139](http://localhost:3000/tentenths/inkproof-coordination/issues/139)).
 - CI checks performance as a regression against a baseline (PERF-5); the human measures PERF-1, PERF-3 and ACC-1 on devices (2026-11-17, [inkproof-demo#2](http://localhost:3000/tentenths/inkproof-demo/issues/2)).
+- A Demo MVP comes before the rest of 1.0 (2026-11-17, [#145](http://localhost:3000/tentenths/inkproof-coordination/issues/145)); the 1.0 acceptance is unchanged and what the MVP leaves out is deferred.
 - The coordinator merges its own pull requests that touch only `ROADMAP.md` and `NEEDS-HUMAN.md`; `CODEOWNERS` keeps requirements, `CLAUDE.md`, the licence and `.github/` waiting for the human (2026-11-06, inkproof-coordination#10).
 
 ## Milestone 1: proved aggregation and linear scales
@@ -200,3 +201,13 @@ Decided by the human (2026-11-16, inkproof-coordination#123): the flagship demo 
 | inkproof-viewport | Integer index range of an interval | [inkproof-viewport#17](http://localhost:3000/tentenths/inkproof-viewport/issues/17) |
 | inkproof-scale | Public placement error bound | [inkproof-scale#52](http://localhost:3000/tentenths/inkproof-scale/issues/52) |
 | inkproof-demo | ACC-1 to ACC-10, PERF-1 to PERF-3, PERF-5 | [inkproof-demo#2](http://localhost:3000/tentenths/inkproof-demo/issues/2) (chart, PERF-1 to 3), [#3](http://localhost:3000/tentenths/inkproof-demo/issues/3) (ACC-3, ACC-6), [#4](http://localhost:3000/tentenths/inkproof-demo/issues/4) (ACC-7), [#5](http://localhost:3000/tentenths/inkproof-demo/issues/5) (ACC-8, ACC-10; waits for web#13 and scene#16), [#6](http://localhost:3000/tentenths/inkproof-demo/issues/6) (ACC-9), [#7](http://localhost:3000/tentenths/inkproof-demo/issues/7) (PERF-5; waits for core#62) |
+
+### Demo MVP
+
+Decided by the human (2026-11-17, [#145](http://localhost:3000/tentenths/inkproof-coordination/issues/145)): a working demo ahead of the whole 1.0 acceptance list, run within Milestone 7. It keeps every criterion that shows a guarantee.
+
+- In scope: ACC-3, ACC-6 and ACC-9 (met); [inkproof-demo#2](http://localhost:3000/tentenths/inkproof-demo/issues/2) (stacked linked traces from tiles, ACC-2, ACC-4, ACC-5, zoom to individual samples with the finest zooms read from raw sample files; waits for [inkproof-web#19](http://localhost:3000/tentenths/inkproof-web/issues/19)); [#4](http://localhost:3000/tentenths/inkproof-demo/issues/4) (ACC-7, after #2); [#53](http://localhost:3000/tentenths/inkproof-demo/issues/53) (ACC-10, moved out of #5); [#46](http://localhost:3000/tentenths/inkproof-demo/issues/46) (README).
+- Data: one quarter, four stations (IU.ANMO, IU.COLA, IU.KONO, IU.MAJO, HHZ), 90 days from 2025-03-01 with the USGS catalogue for the range, pinned in the repository. The default fetch stays the small slice; the quarter is opt-in.
+- Performance: smooth pan and zoom on a laptop; the baseline regression check in CI is enough.
+- Deferred to 1.0: the rest of [inkproof-demo#5](http://localhost:3000/tentenths/inkproof-demo/issues/5) (ACC-8), the full year, PERF-1, PERF-3 and ACC-1 on phones, and [inkproof-demo#7](http://localhost:3000/tentenths/inkproof-demo/issues/7) (PERF-5). Do not start them during the MVP.
+- Done when everything in scope is merged and released as a demo version and the README says how to fetch the quarter, build the tiles and serve the site, and what to look at for each criterion. The coordinator says so on #145 for the human to check on a laptop.
