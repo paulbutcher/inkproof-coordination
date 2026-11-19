@@ -5,6 +5,7 @@
 .* @paulbutcher @conformance
 API\.lock @paulbutcher
 \.forgejo/.* @paulbutcher
+\.github/.* @paulbutcher
 lean-toolchain @paulbutcher
 CLAUDE\.md @paulbutcher
 REQUIREMENTS\.md @paulbutcher
