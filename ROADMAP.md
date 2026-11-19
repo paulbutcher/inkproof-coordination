@@ -23,6 +23,7 @@ Other open requests, all from the consumer: [inkproof-scale#6](http://localhost:
 - One Lasm version everywhere, the latest release, moved in every repository together (2026-11-17, [#139](http://localhost:3000/tentenths/inkproof-coordination/issues/139)).
 - CI checks performance as a regression against a baseline (PERF-5); the human measures PERF-1, PERF-3 and ACC-1 on devices (2026-11-17, [inkproof-demo#2](http://localhost:3000/tentenths/inkproof-demo/issues/2)).
 - A Demo MVP comes before the rest of 1.0 (2026-11-17, [#145](http://localhost:3000/tentenths/inkproof-coordination/issues/145)); the 1.0 acceptance is unchanged and what the MVP leaves out is deferred.
+- The seismic `inkproof-demo` is mothballed, kept only for code worth reusing, and a new `inkproof-demos` project recreates the uPlot demos in short milestones that each end in a deployed page (2026-11-19, the human, in conversation). [inkproof-demo#5](http://localhost:3000/tentenths/inkproof-demo/issues/5) and [#7](http://localhost:3000/tentenths/inkproof-demo/issues/7) are closed as not planned.
 - Web's bounded LRU map stays in Web; once the demo is done it is to be extracted into a separate, non-inkproof library (2026-11-17, [#147](http://localhost:3000/tentenths/inkproof-coordination/issues/147), [#149](http://localhost:3000/tentenths/inkproof-coordination/issues/149)). No inkproof-containers library.
 - The coordinator merges its own pull requests that touch only `ROADMAP.md` and `NEEDS-HUMAN.md`; `CODEOWNERS` keeps requirements, `CLAUDE.md`, the licence and `.github/` waiting for the human (2026-11-06, inkproof-coordination#10).
 
@@ -205,6 +206,8 @@ Decided by the human (2026-11-16, inkproof-coordination#123): the flagship demo 
 
 ### Demo MVP
 
+Superseded on 2026-11-19 by the Demos plan below: the seismic demo is mothballed. What follows is the record of what was decided.
+
 Decided by the human (2026-11-17, [#145](http://localhost:3000/tentenths/inkproof-coordination/issues/145)): a working demo ahead of the whole 1.0 acceptance list, run within Milestone 7. It keeps every criterion that shows a guarantee.
 
 - In scope: ACC-3, ACC-6 and ACC-9 (met); [inkproof-demo#2](http://localhost:3000/tentenths/inkproof-demo/issues/2) (stacked linked traces from tiles, ACC-2, ACC-4, ACC-5, zoom to individual samples with the finest zooms read from raw sample files; waits for [inkproof-web#19](http://localhost:3000/tentenths/inkproof-web/issues/19)); [#4](http://localhost:3000/tentenths/inkproof-demo/issues/4) (ACC-7, after #2); [#53](http://localhost:3000/tentenths/inkproof-demo/issues/53) (ACC-10, moved out of #5); [#46](http://localhost:3000/tentenths/inkproof-demo/issues/46) (README).
@@ -216,3 +219,22 @@ Decided by the human (2026-11-17, [#145](http://localhost:3000/tentenths/inkproo
 ### Review follow-ups 6
 
 Adopted from the MVP milestone's architecture review (inkproof-coordination#152 to #154): Scene publishes the Item chain traversal ([inkproof-scene#25](http://localhost:3000/tentenths/inkproof-scene/issues/25)), then Gpu and Export use it; Core takes `trimZeros` and Rat rounding ([inkproof-core#76](http://localhost:3000/tentenths/inkproof-core/issues/76)), then Export uses them and Web records why `showFloat` stays; Float, Core, Axis and Scene list missing jobs in their READMEs ([float#28](http://localhost:3000/tentenths/inkproof-float/issues/28), [core#77](http://localhost:3000/tentenths/inkproof-core/issues/77), [axis#23](http://localhost:3000/tentenths/inkproof-axis/issues/23), [scene#26](http://localhost:3000/tentenths/inkproof-scene/issues/26)). The MVP is accepted once the human's laptop check on #145 closes; #155 and #156 are the human's.
+
+## Demos
+
+The new `inkproof-demos` repository recreates the uPlot demos (https://leeoniya.github.io/uPlot/demos/index.html) to show what Inkproof does without any domain knowledge. Every milestone ends with a page anyone can open at a public URL, checked side by side with the uPlot original. A demo that needs library work moves later in the order and never blocks its milestone; library requests are filed as soon as the need is known, so they are ready by the milestone that uses them. The repository, its agent and where the pages are hosted are the human's to provide.
+
+| # | Milestone | Demos (uPlot names) | New library work |
+| --- | --- | --- | --- |
+| 1 | First chart | area-fill, on a skeleton with an index page and deploy | None expected |
+| 2 | Static gallery A | high-low-bands, missing-data, path-gap-clip, log-scales, log-scales2, axis-control, axis-label-rotation | None expected |
+| 3 | Static gallery B | scatter, points, heatmap-cells, latency-heatmap, bars with values, grouped bars, sparklines, sparklines-bars | None expected |
+| 4 | The headline | reduction-accuracy and a million-point comparison: spikes in dense data that naive decimation loses and Inkproof cannot | None expected |
+| 5 | Pointer zoom | zoom-wheel, zoom-touch, zoom-variations, zoom-reset-range | Pointer input in Web (wheel, drag, pinch, box zoom); [inkproof-web#38](http://localhost:3000/tentenths/inkproof-web/issues/38), GPU state kept between draws |
+| 6 | Linked views | sync-cursor, cursor-bind, zoom-ranger, zoom-fetch | Cursor drawing; `Linked` driven by the pointer |
+| 7 | Composed shapes | candlestick, box-whisker, timeline-discrete, annotations | Possibly a Scene compiler; the primitives exist |
+| 8 | New capabilities | tooltips and legends, calendar time (timezones-dst, months, log-time-axis), then stacked series, gradients, stepped and smooth lines, custom and arcsinh scales | Each is its own decision, ordered by value |
+
+Milestones 1 to 4 need no library change, so they show results at once; milestone 5's library work runs in parallel with them. Streaming (stream-data, sine-stream) conflicts with precomputed pyramids and is left out until someone asks.
+
+Open for the human: the repository, agent and hosting ([#160](http://localhost:3000/tentenths/inkproof-coordination/issues/160)). 1.0 acceptance is rewritten around the demos site, with ACC-1 to ACC-10 kept and each tied to a demo page (2026-11-19, the human, [#161](http://localhost:3000/tentenths/inkproof-coordination/issues/161)); the change to `REQUIREMENTS.md` is [#162](http://localhost:3000/tentenths/inkproof-coordination/pulls/162).
