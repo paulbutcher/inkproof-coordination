@@ -236,20 +236,20 @@ Proofs show the code meets its specifications; validation checks that the specif
 
 ## Acceptance
 
-Version 1.0 is accepted when a flagship demo built only on these libraries meets every criterion below, alongside all Must theorems and validation checks passing in CI.
+Version 1.0 is accepted when the `inkproof-demos` site, built only on these libraries and live at a public URL, meets every criterion below, alongside all Must theorems and validation checks passing in CI.
 
-The demo charts a year of continuous public seismic recordings from several stations (roughly 3 billion samples per station), with an earthquake catalog overlay, hosted as a static site with precomputed tiles.
+The site recreates the uPlot demos, each checked side by side with the original, plus a headline comparison of a million-point series whose narrow spikes naive decimation loses.
 
-- [ ] **ACC-1** Smooth zoom from the full year to individual samples on a mid-range phone, meeting PERF-1 and PERF-3.
-- [ ] **ACC-2** Every catalogued earthquake in view is visible at every zoom level and position, including after a "random view" jump (PROOF-1, PROOF-4).
-- [ ] **ACC-3** A naive-decimation toggle visibly loses or distorts events; switching back restores them.
+- [ ] **ACC-1** Every demo page zooms and draws smoothly on a mid-range phone, meeting PERF-1 and PERF-3.
+- [ ] **ACC-2** On the headline comparison every spike in view is visible at every zoom level and position, including after a "random view" jump (PROOF-1, PROOF-4).
+- [ ] **ACC-3** A naive-decimation toggle visibly loses or distorts spikes; switching back restores them.
 - [ ] **ACC-4** No jitter at the deepest zoom, with the proved error bound displayed (PROOF-6).
-- [ ] **ACC-5** Station outages shown as gaps, never bridged (PROOF-7).
-- [ ] **ACC-6** A pixel inspector shows, for any column, the raw samples, independently computed min and max, and the plain-English statement of the guaranteeing theorem.
-- [ ] **ACC-7** An automated input robot runs thousands of random interactions with no cursor drift, desynchronised links or limit violations (PROOF-9, PROOF-10).
-- [ ] **ACC-8** Linked stacked traces, station map, tooltips, light and dark themes, keyboard control and SVG/PDF export all work.
+- [ ] **ACC-5** Missing data is shown as gaps, never bridged (PROOF-7).
+- [ ] **ACC-6** A pixel inspector shows, for any column of the headline comparison, the raw samples, independently computed min and max, and the plain-English statement of the guaranteeing theorem.
+- [ ] **ACC-7** An automated input robot runs thousands of random interactions on the linked views with no cursor drift, desynchronised links or limit violations (PROOF-9, PROOF-10).
+- [ ] **ACC-8** Tooltips, light and dark themes, keyboard control and SVG/PDF export work on the demo pages.
 - [ ] **ACC-9** A page lists every theorem with links to its source, and the trusted computing base table (TCB-1).
-- [ ] **ACC-10** Source for each chart is viewable in the demo and is short (API-1).
+- [ ] **ACC-10** Source for each chart is viewable on its page and is short (API-1).
 
 ## Out of scope
 
@@ -287,5 +287,4 @@ Open questions:
 - [ ] Can Lasm's binding generator be reused for GPU-5, or is a separate generator needed?
 - [ ] How much of the GLSL ES precision model must be formalised for PROOF-6 and PROOF-15?
 - [ ] Should the PDF exporter be in Lean or delegate to a JavaScript library in the trusted base?
-- [ ] Which seismic network's data and licence to use for the flagship demo?
 - [x] Licence for the libraries themselves (for example Apache 2.0)? Apache 2.0, as for Lean and Mathlib, with the standard `LICENSE` file in every repository.
