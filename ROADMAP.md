@@ -235,6 +235,8 @@ The new `inkproof-demos` repository recreates the uPlot demos (https://leeoniya.
 | 7 | Composed shapes | candlestick, box-whisker, timeline-discrete, annotations | Possibly a Scene compiler; the primitives exist |
 | 8 | New capabilities | tooltips and legends, calendar time (timezones-dst, months, log-time-axis), then stacked series, gradients, stepped and smooth lines, custom and arcsinh scales | Each is its own decision, ordered by value |
 
+Demos 5's library work (inkproof-web#38, #42) is released as web v0.4.9 and v0.5.0 and the milestone is accepted ([#167](http://localhost:3000/tentenths/inkproof-coordination/issues/167)); the demo pages for it are briefed on inkproof-demos when Demos 4 merges.
+
 Milestones 1 to 4 need no library change, so they show results at once; milestone 5's library work runs in parallel with them. Streaming (stream-data, sine-stream) conflicts with precomputed pyramids and is left out until someone asks.
 
 The human provided `inkproof-demos` (level 3), its agent and hosting on GitHub Pages (https://paulbutcher.github.io/inkproof-demos/, deployed from each release tag), and archived `inkproof-demo` ([#160](http://localhost:3000/tentenths/inkproof-coordination/issues/160), 2026-11-19). Briefs for Demos 1 to 4 are [inkproof-demos#2](http://localhost:3000/tentenths/inkproof-demos/issues/2) to [#5](http://localhost:3000/tentenths/inkproof-demos/issues/5); Demos 5 to 8 are briefed when their predecessor merges. 1.0 acceptance is rewritten around the demos site, with ACC-1 to ACC-10 kept and each tied to a demo page (2026-11-19, the human, [#161](http://localhost:3000/tentenths/inkproof-coordination/issues/161)); the change to `REQUIREMENTS.md` is [#162](http://localhost:3000/tentenths/inkproof-coordination/pulls/162).
