@@ -18,6 +18,7 @@ Existing libraries that could serve Inkproof. Each line: what it offers, URL, an
 - Server stack: lean-routing, lean-middleware, lean-webapp, lean-authentication, lean-jose, lean-telemetry, leanpostgres and the native bindings (leancurl, leanxml2, lean-aws, lean-llmclient, lean-mcp). Server-side or native; not for Lasm.
 - leanin: Tokio-style concurrency and work-stealing scheduler, with proofs. https://github.com/paulbutcher/leanin. Native; Lasm unknown. Check before writing any scheduling code.
 - lasm-todomvc: Lasm example application, the closest reference for browser structure. https://github.com/paulbutcher/lasm-todomvc. Works under Lasm. Lasm.Web, Lasm.UI and Lasm.JS are not a Lake dependency; they ship in `@lasm/cli`, documented in docs/ of https://github.com/Millillion/lasm.
+- lean-random-sampling (v0.1.0): seeded draws over any core `RandomGen`: bounded naturals (`nat`, `nats`), `draws` of any sampler, uniform float strictly in (0, 1) at 2^-53 (`uniform`), normal and skew normal (`normal`, `standardNormal`, `skewNormal`), with theorems for bounds, sizes and definitions; Lean core only. https://github.com/paulbutcher/lean-random-sampling. Lasm unknown (inkproof-demos#68 builds it under Lasm).
 - Full list: https://github.com/paulbutcher?tab=repositories&language=lean. Archived or superseded: lean-forms, partition-when.
 
 ## Reservoir
