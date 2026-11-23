@@ -264,3 +264,5 @@ Demos 10 (Float.onRat adoption) is accepted ([#222](http://localhost:3000/tenten
 Demos 11 (timezone adapter) is accepted ([#225](http://localhost:3000/tentenths/inkproof-coordination/issues/225)): Axis `v0.11.0` publishes `posixZone`, the POSIX-rule offset function, and demos `v0.20.0` uses it in place of its own copy.
 
 The Demos plan holds nothing more to brief (2026-11-22): every uPlot demo in milestones 1 to 8 is built or waits on no open request, streaming stays out until someone asks, and the Demos 9 to 11 follow-ups are accepted. What remains is the human's: checking the pages against uPlot and measuring PERF-1, PERF-3 and ACC-1 on devices.
+
+Configuration 1 is accepted ([#229](http://localhost:3000/tentenths/inkproof-coordination/issues/229)): the configuration convention ([#228](http://localhost:3000/tentenths/inkproof-coordination/issues/228)) is carried out by Axis `v0.13.0` (shared `NumberFormat`), Scene `v0.28.0` (shared `TextStyle`, optional axis parts) and Web `v0.23.0` (cursor and interaction as list-of-words facets). Demos follow-ups to adopt them are filed when each is wanted.
