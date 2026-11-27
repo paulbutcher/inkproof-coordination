@@ -273,7 +273,7 @@ In flight (2026-11-23), outside any milestone: demos PARITY.md comparisons with 
 
 Match the Demos pages to their uPlot originals and make legend toggles fast: [inkproof-demos#109](http://localhost:3000/tentenths/inkproof-demos/issues/109) (PARITY.md, with [#117](http://localhost:3000/tentenths/inkproof-demos/issues/117), [#118](http://localhost:3000/tentenths/inkproof-demos/issues/118)) and [#110](http://localhost:3000/tentenths/inkproof-demos/issues/110) (with [#115](http://localhost:3000/tentenths/inkproof-demos/issues/115), [#116](http://localhost:3000/tentenths/inkproof-demos/issues/116)), which wait on Gpu's retained layers ([inkproof-gpu#70](http://localhost:3000/tentenths/inkproof-gpu/issues/70), [#72](http://localhost:3000/tentenths/inkproof-gpu/issues/72)). The README version-pin requests ([#231](http://localhost:3000/tentenths/inkproof-coordination/issues/231)) run alongside. The milestone is in each of those repositories (2026-11-23).
 
-Parity 1 is accepted ([#250](http://localhost:3000/tentenths/inkproof-coordination/issues/250)): every brief is closed and verified, with Gpu's retained layers (`Layer.same`, `Retained`, `Stream`), Scene's `DisplayList.outline` and the Demos pages on the retained path.
+Parity 1 is not yet accepted ([#250](http://localhost:3000/tentenths/inkproof-coordination/issues/250) is reopened): every brief but [inkproof-demos#109](http://localhost:3000/tentenths/inkproof-demos/issues/109) is closed and verified, with Gpu's retained layers (`Layer.same`, `Retained`, `Stream`), Scene's `DisplayList.outline` and the Demos pages on the retained path.
 
 ## Reuse 2
 
